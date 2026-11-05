@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Página não encontrada — Brotta</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#F3F0E8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F3F0E8;--sheet:#FBFAF6;--ink:#15140F;--ink-2:#4A473E;--ink-3:#6B6759;--rule:rgba(21,20,15,.14);--rule-strong:rgba(21,20,15,.32);--broto:#1C8C47;--broto-ink:#136A34;--carbon:#3A3896;--ease-out:cubic-bezier(.16,1,.3,1);--display:"Schibsted Grotesk",ui-sans-serif,system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+body{min-height:100svh;display:flex;flex-direction:column;background:var(--paper);color:var(--ink);font:17px/1.55 var(--display);-webkit-font-smoothing:antialiased}
+::selection{background:var(--broto);color:#fff}
+:focus-visible{outline:2px solid var(--broto);outline-offset:3px;border-radius:6px}
+a{color:inherit}
+.wrap{width:100%;max-width:1240px;margin-inline:auto;padding-inline:clamp(16px,4vw,48px)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:22px;letter-spacing:-.04em}
+.logo svg{width:30px;height:30px;color:var(--broto)}
+main{flex:1;display:flex;align-items:center;padding:clamp(24px,5vw,64px) 0}
+main .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(32px,6vw,88px);align-items:center}
+h1{font-size:clamp(44px,6.4vw,88px);font-weight:800;letter-spacing:-.045em;line-height:.96;text-wrap:balance}
+h1 em{font-style:normal;color:var(--broto-ink)}
+.lede{margin-top:22px;max-width:30em;font-size:clamp(18px,1.6vw,20px);color:var(--ink-2)}
+.ctas{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:.6em;height:52px;padding:0 22px;border-radius:999px;font:600 16px/1 var(--display);text-decoration:none;border:1px solid transparent;transition:transform .16s var(--ease-out),background-color .2s,border-color .2s;-webkit-tap-highlight-color:transparent}
+.btn:active{transform:scale(.97)}
+.btn-ink{background:var(--ink);color:var(--paper)}
+.btn-ink:hover{background:var(--broto-ink)}
+.btn-line{border-color:var(--rule-strong)}
+.btn-line:hover{border-color:var(--ink)}
+.btn svg{width:18px;height:18px}
+.ticket{position:relative;background:var(--sheet);border-radius:14px;box-shadow:0 1px 0 rgba(21,20,15,.04),0 24px 60px -24px rgba(21,20,15,.28),0 8px 18px -10px rgba(21,20,15,.14);padding:28px 28px 96px;max-width:440px;width:100%;justify-self:end}
+.ticket::before,.ticket::after{content:"";position:absolute;left:-1px;right:-1px;height:10px;background:radial-gradient(circle at 7px 0,transparent 5px,var(--sheet) 5.5px) 0 0/14px 10px repeat-x}
+.ticket::before{top:-9px;transform:scaleY(-1)}
+.ticket::after{bottom:-9px}
+.t-head{display:flex;justify-content:space-between;font-size:12px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.08em}
+.t-head b{font:500 12px var(--mono);color:var(--ink)}
+.t-rule{border:0;border-top:1px dashed var(--rule-strong);margin:18px 0}
+.t-field{display:grid;grid-template-columns:96px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid var(--rule)}
+.t-field:last-of-type{border-bottom:0}
+.t-label{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-3);padding-top:3px}
+.t-val{font-size:17px;font-weight:600;line-height:1.35;word-break:break-word}
+.t-val.carbon{font:500 14px/1.5 var(--mono);color:var(--carbon)}
+.stamp{position:absolute;right:26px;bottom:30px;padding:10px 16px;border:2.5px solid #B4532A;border-radius:8px;color:#B4532A;font:800 20px/1 var(--display);letter-spacing:.06em;transform:rotate(-8deg);opacity:.9;mix-blend-mode:multiply;animation:stamp .6s .35s var(--ease-out) both}
+.stamp small{display:block;font:500 10px/1 var(--mono);margin-top:5px;text-align:center}
+@keyframes stamp{0%{opacity:0;transform:rotate(-14deg) scale(1.9);filter:blur(6px)}55%{opacity:.95;transform:rotate(-7deg) scale(.96);filter:blur(0)}100%{opacity:.9;transform:rotate(-8deg) scale(1)}}
+footer{border-top:1px solid var(--rule);padding:24px 0;color:var(--ink-3);font-size:14px}
+@media (max-width:860px){main .wrap{grid-template-columns:1fr}.ticket{justify-self:start}}
+@media (prefers-reduced-motion:reduce){.stamp{animation:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-sprout" viewBox="0 0 32 32"><path d="M16 29V15" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" fill="none"/><path d="M16 16c0-6.5 4.6-11 11-11 0 6.4-4.5 11-11 11z" fill="currentColor"/><path d="M16 19.5C16 14.6 12.5 11 7.5 11c0 5 3.6 8.5 8.5 8.5z" fill="currentColor" opacity=".55"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.6 8.4c.2-.5.5-.5.8-.5h.5c.2 0 .4 0 .6.5l.7 1.6c.1.2.1.4 0 .6l-.5.7c-.1.2-.1.4 0 .6.6 1 1.4 1.8 2.4 2.4.2.1.4.1.6 0l.7-.5c.2-.1.4-.1.6 0l1.6.7c.4.2.5.4.5.6v.5c0 .3 0 .6-.5.8-.6.3-1.6.6-2.9 0-1.4-.6-3.4-2.2-4.4-4-.9-1.6-.7-2.5-.4-3z" fill="currentColor"/></symbol>
+</svg>
+
+<header><div class="wrap"><a class="logo" href="/" aria-label="Brotta, início"><svg><use href="#i-sprout"/></svg>brotta</a></div></header>
+
+<main>
+  <div class="wrap">
+    <div>
+      <h1>Essa página travou. <em>O resto do site, não.</em></h1>
+      <p class="lede">O endereço que você abriu não existe ou mudou de lugar. Volte para o início ou fale direto com a gente.</p>
+      <div class="ctas">
+        <a class="btn btn-ink" href="/">Voltar para o início <svg><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-line" href="https://wa.me/5511993977531?text=Ol%C3%A1%2C%20Brotta!" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg> Falar no WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="ticket">
+      <div class="t-head"><span>Pedido de destrave</span><b>Nº 404</b></div>
+      <hr class="t-rule">
+      <div class="t-field"><span class="t-label">Endereço</span><span class="t-val" id="path">/</span></div>
+      <div class="t-field"><span class="t-label">Gargalo</span><span class="t-val">Página não encontrada.</span></div>
+      <div class="t-field"><span class="t-label">Solução</span><span class="t-val carbon">Voltar ao início → brotta.online</span></div>
+      <div class="stamp" aria-hidden="true">NÃO ACHADO<small>ERRO 404</small></div>
+    </div>
+  </div>
+</main>
+
+<footer><div class="wrap">© 2026 Brotta Ecossistemas Digitais LTDA · CNPJ 69.959.244/0001-00</div></footer>
+<script>document.getElementById("path").textContent = decodeURIComponent(location.pathname) || "/";</script>
+</body>
+</html>
