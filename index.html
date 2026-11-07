@@ -590,7 +590,7 @@ footer a:hover{color:var(--ink)}
 <script>
 (() => {
   // >>> Troque pelo WhatsApp real da Brotta (DDI + DDD + número, só dígitos)
-  const WHATSAPP = "5511993977531";
+  const WHATSAPP = "5511912728420";
   const wa = msg => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`;
   document.querySelectorAll(".wa-link").forEach(a => a.href = wa(a.dataset.msg || "Olá, Brotta!"));
   document.getElementById("yr").textContent = new Date().getFullYear();
