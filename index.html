@@ -3,664 +3,210 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Brotta — Ecossistemas Digitais</title>
-<meta name="description" content="A Brotta encontra o gargalo que trava a sua empresa e constrói o software que destrava. Vollta, Lentiva, lojas Shopify e sistemas sob medida.">
+<title>Brotta · Tecnologia para destravar a sua empresa</title>
+<meta name="description" content="A Brotta encontra o gargalo da sua operação e constrói o software que resolve. Vollta, Lentiva, lojas Shopify e sistemas sob medida.">
 <meta name="theme-color" content="#F3F0E8">
+<meta property="og:title" content="Brotta · Tecnologia para destravar a sua empresa">
+<meta property="og:description" content="Encontramos o gargalo da sua operação e construímos o software que resolve.">
+<meta property="og:url" content="https://brotta.online/">
+<meta property="og:type" content="website">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-:root{
-  --paper:#F3F0E8;
-  --paper-2:#ECE8DD;
-  --sheet:#FBFAF6;
-  --ink:#15140F;
-  --ink-2:#4A473E;
-  --ink-3:#6B6759;
-  --rule:rgba(21,20,15,.14);
-  --rule-strong:rgba(21,20,15,.32);
-  --broto:#1C8C47;
-  --broto-ink:#136A34;
-  --broto-soft:#DCEBDD;
-  --carbon:#3A3896;
-  --radius:14px;
-  --gutter:clamp(16px,4vw,48px);
-  --max:1240px;
-  --ease-out:cubic-bezier(.16,1,.3,1);
-  --display:"Schibsted Grotesk",ui-sans-serif,system-ui,sans-serif;
-  --mono:"JetBrains Mono",ui-monospace,monospace;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scrollbar-color:var(--ink-3) var(--paper)}
-body{background:var(--paper);color:var(--ink);font-family:var(--display);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;caret-color:var(--broto)}
-::selection{background:var(--broto);color:#fff}
-::-webkit-scrollbar{width:10px}
-::-webkit-scrollbar-track{background:var(--paper)}
-::-webkit-scrollbar-thumb{background:var(--ink-3);border-radius:10px;border:3px solid var(--paper)}
-a{color:inherit;text-underline-offset:.22em;text-decoration-thickness:1px}
-:focus-visible{outline:2px solid var(--broto);outline-offset:3px;border-radius:6px}
-img,svg{display:block}
-.wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--gutter)}
-.mono{font-family:var(--mono);font-feature-settings:"tnum";letter-spacing:0}
-h1,h2,h3{font-weight:700;letter-spacing:-.035em;line-height:1.02;text-wrap:balance}
-p{text-wrap:pretty}
-
-/* ---------- buttons ---------- */
-.btn{--h:52px;display:inline-flex;align-items:center;gap:.6em;height:var(--h);padding:0 22px;border-radius:999px;font:600 16px/1 var(--display);text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .16s var(--ease-out),background-color .2s,color .2s,border-color .2s;-webkit-tap-highlight-color:transparent;user-select:none}
-.btn:active{transform:scale(.97)}
-.btn-ink{background:var(--ink);color:var(--paper)}
-.btn-ink:hover{background:var(--broto-ink)}
-.btn-line{border-color:var(--rule-strong);color:var(--ink);background:transparent}
-.btn-line:hover{border-color:var(--ink)}
-.btn svg{width:18px;height:18px;flex:none}
-
-/* ---------- nav ---------- */
-.nav{position:sticky;top:0;z-index:40;background:color-mix(in oklab,var(--paper) 88%,transparent);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid transparent;transition:border-color .3s}
-.nav.scrolled{border-bottom-color:var(--rule)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:24px}
-.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:22px;letter-spacing:-.04em}
-.logo svg{width:30px;height:30px}
-.nav-links{display:flex;gap:30px;list-style:none;font-size:15px;font-weight:500;color:var(--ink-2)}
-.nav-links a{text-decoration:none;transition:color .2s}
-.nav-links a:hover{color:var(--ink)}
-.nav .btn{--h:42px;padding:0 18px;font-size:15px}
-@media (max-width:880px){.nav-links{display:none}}
-
-/* ---------- hero ---------- */
-.hero{padding:clamp(28px,5vw,64px) 0 clamp(40px,5vw,72px)}
-.hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(40px,6vw,88px);align-items:center}
-.hero h1{font-size:clamp(44px,6.2vw,88px);font-weight:800;letter-spacing:-.045em;line-height:.96}
-.hero h1 .soft{color:var(--ink-3);font-weight:700}
-.hero h1 em{font-style:normal;color:var(--broto-ink)}
-.hero .lede{margin-top:22px;max-width:34em;font-size:clamp(18px,1.6vw,21px);color:var(--ink-2);line-height:1.5}
-.hero .ctas{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px}
-.hero .note{margin-top:22px;font-size:14px;color:var(--ink-3)}
-@media (max-width:960px){.hero .wrap{grid-template-columns:1fr}}
-
-/* ---------- order ticket (signature) ---------- */
-.ticket{position:relative;background:var(--sheet);border-radius:var(--radius);box-shadow:0 1px 0 rgba(21,20,15,.04),0 24px 60px -24px rgba(21,20,15,.28),0 8px 18px -10px rgba(21,20,15,.14);padding:28px 28px 96px;max-width:480px;width:100%;justify-self:end;isolation:isolate}
-@media (max-width:960px){.ticket{justify-self:start}}
-.ticket::before,.ticket::after{content:"";position:absolute;left:-1px;right:-1px;height:10px;background:radial-gradient(circle at 7px 0,transparent 5px,var(--sheet) 5.5px) 0 0/14px 10px repeat-x}
-.ticket::before{top:-9px;transform:scaleY(-1)}
-.ticket::after{bottom:-9px}
-.t-head{display:flex;justify-content:space-between;align-items:baseline;font-size:12px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.08em}
-.t-head b{font-weight:500;color:var(--ink)}
-.t-rule{border:0;border-top:1px dashed var(--rule-strong);margin:18px 0}
-.t-field{display:grid;grid-template-columns:96px 1fr;gap:12px;align-items:baseline;padding:10px 0;border-bottom:1px solid var(--rule)}
-.t-field:last-of-type{border-bottom:0}
-.t-label{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-3)}
-.t-val{font-size:17px;font-weight:600;letter-spacing:-.01em;line-height:1.35;min-height:2.7em}
-.t-val.carbon{color:var(--carbon);font-family:var(--mono);font-weight:500;font-size:15px;min-height:0}
-.t-swap{transition:opacity .35s var(--ease-out),filter .35s var(--ease-out),transform .35s var(--ease-out)}
-.t-swap.out{opacity:0;filter:blur(4px);transform:translateY(4px)}
-.stamp{position:absolute;right:26px;bottom:30px;z-index:2;display:grid;place-items:center;padding:10px 16px;border:2.5px solid var(--broto);border-radius:8px;color:var(--broto);font:800 20px/1 var(--display);letter-spacing:.06em;transform:rotate(-8deg);opacity:.9;mix-blend-mode:multiply;pointer-events:none}
-.stamp small{display:block;font:500 10px/1 var(--mono);letter-spacing:.04em;margin-top:5px}
-.stamp.hit{animation:stamp .55s var(--ease-out) both}
-.stamp.lift{opacity:0;transition:opacity .25s}
-@keyframes stamp{0%{opacity:0;transform:rotate(-14deg) scale(1.9);filter:blur(6px)}55%{opacity:.95;transform:rotate(-7deg) scale(.96);filter:blur(0)}100%{opacity:.9;transform:rotate(-8deg) scale(1)}}
-.t-dots{display:flex;gap:6px;position:absolute;left:28px;bottom:42px}
-.t-dots button{width:22px;height:4px;border-radius:4px;border:0;background:var(--rule-strong);cursor:pointer;transition:background-color .3s,width .3s var(--ease-out);padding:0}
-.t-dots button[aria-current="true"]{background:var(--ink);width:36px}
-
-/* ---------- strip ---------- */
-.strip{border-block:1px solid var(--rule);padding:22px 0;overflow:hidden}
-.strip .wrap{display:grid;grid-template-columns:repeat(4,auto);gap:16px 32px;align-items:center;justify-content:space-between;font-size:15px;color:var(--ink-2)}
-.strip b{color:var(--ink);font-weight:700}
-.strip span{display:flex;align-items:center;gap:10px}
-.strip span b{white-space:nowrap}@media (max-width:960px){.strip .wrap{grid-template-columns:1fr 1fr;justify-content:start}}@media (max-width:520px){.strip .wrap{grid-template-columns:1fr}}
-.strip svg{width:16px;height:16px;color:var(--broto)}
-
-/* ---------- sections ---------- */
-section{scroll-margin-top:80px}
-.sec{padding:clamp(56px,7vw,96px) 0}
-.sec-head{display:grid;grid-template-columns:1.4fr 1fr;gap:clamp(24px,5vw,72px);align-items:end;margin-bottom:clamp(28px,3.5vw,48px)}
-.sec-head h2{font-size:clamp(34px,4.4vw,58px)}
-.sec-head p{color:var(--ink-2);font-size:clamp(17px,1.4vw,19px);max-width:32em}
-@media (max-width:820px){.sec-head{grid-template-columns:1fr}}
-
-/* manifesto */
-.manifesto{background:var(--sheet);border-block:1px solid var(--rule)}
-.manifesto .big{font-size:clamp(28px,3.8vw,50px);font-weight:600;letter-spacing:-.03em;line-height:1.15;max-width:22em;text-wrap:balance}
-.manifesto .big .dim{color:var(--ink-3)}
-.manifesto .big em{font-style:normal;color:var(--broto-ink)}
-.beliefs{margin-top:clamp(32px,4vw,56px);display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink)}
-.belief{padding:28px 28px 8px 0}
-.belief + .belief{padding-left:28px;border-left:1px solid var(--rule)}
-.belief h3{font-size:22px;letter-spacing:-.02em;line-height:1.2;margin-bottom:12px}
-.belief p{color:var(--ink-2);font-size:16px}
-@media (max-width:820px){.beliefs{grid-template-columns:1fr}.belief,.belief + .belief{padding:24px 0;border-left:0;border-bottom:1px solid var(--rule)}}
-.origin{margin-top:36px;display:flex;gap:16px;align-items:flex-start;max-width:46em;color:var(--ink-2);font-size:16px}
-.origin svg{flex:none;width:22px;height:22px;color:var(--broto);margin-top:2px}
-
-/* products */
-.prod-tabs{display:flex;gap:4px;border-bottom:1px solid var(--rule);overflow-x:auto;scrollbar-width:none}
-.prod-tabs::-webkit-scrollbar{display:none}
-.prod-tab{appearance:none;background:none;border:0;cursor:pointer;padding:16px 22px 18px;font:600 18px/1 var(--display);letter-spacing:-.02em;color:var(--ink-3);position:relative;white-space:nowrap;transition:color .2s}
-.prod-tab:hover{color:var(--ink)}
-.prod-tab[aria-selected="true"]{color:var(--ink)}
-.prod-tab::after{content:"";position:absolute;left:22px;right:22px;bottom:-1px;height:2px;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease-out)}
-.prod-tab[aria-selected="true"]::after{transform:scaleX(1)}
-.prod-tab .tag{font:500 11px/1 var(--mono);color:var(--broto-ink);margin-left:8px;vertical-align:2px}
-.panel{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(28px,5vw,72px);padding-top:clamp(28px,3.5vw,44px);align-items:center}
-.panel[hidden]{display:none}
-.panel.enter .p-copy,.panel.enter .mock{animation:panelIn .5s var(--ease-out) both}
-.panel.enter .mock{animation-delay:.06s}
-@keyframes panelIn{from{opacity:0;transform:translateY(10px);filter:blur(3px)}to{opacity:1;transform:none;filter:none}}
-.p-copy h3{font-size:clamp(40px,5vw,64px);font-weight:800;letter-spacing:-.045em}
-.p-copy .what{margin-top:14px;font-size:20px;font-weight:600;letter-spacing:-.015em;line-height:1.35;max-width:24em}
-.p-copy .gargalo{margin-top:28px;padding:16px 0;border-block:1px solid var(--rule);display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-size:16px}
-.p-copy .gargalo dt{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);padding-top:4px}
-.p-copy .gargalo dd{color:var(--ink-2)}
-.p-copy ul{list-style:none;margin-top:24px;display:grid;gap:12px}
-.p-copy li{display:flex;gap:12px;color:var(--ink-2);font-size:16px}
-.p-copy li svg{flex:none;width:18px;height:18px;margin-top:3px;color:var(--broto)}
-.p-copy .p-cta{margin-top:30px;display:flex;gap:12px;flex-wrap:wrap}
-@media (max-width:900px){.panel{grid-template-columns:1fr}}
-
-/* mocks */
-.mock{background:var(--sheet);border:1px solid var(--rule);border-radius:20px;padding:22px;box-shadow:0 30px 70px -40px rgba(21,20,15,.35);font-size:14px}
-.mock-bar{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;color:var(--ink-3);font-size:12px}
-.mock-bar b{color:var(--ink);font-weight:700;font-size:15px;letter-spacing:-.01em}
-.pill{display:inline-flex;align-items:center;gap:6px;padding:5px 10px;border-radius:999px;background:var(--broto-soft);color:var(--broto-ink);font:500 11px/1 var(--mono)}
-.pill i{width:6px;height:6px;border-radius:50%;background:var(--broto)}
-.steps{list-style:none;display:grid}
-.steps li{display:grid;grid-template-columns:28px 1fr auto;gap:12px;align-items:start;padding:12px 0;position:relative}
-.steps li::before{content:"";position:absolute;left:13px;top:36px;bottom:-12px;width:1.5px;background:var(--rule)}
-.steps li:last-child::before{display:none}
-.dot{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--paper-2);color:var(--ink-3)}
-.dot.ok{background:var(--broto);color:#fff}
-.dot svg{width:14px;height:14px}
-.steps strong{display:block;font-weight:600;font-size:15px}
-.steps span{color:var(--ink-3);font-size:13px}
-.steps time{font:500 12px/1.6 var(--mono);color:var(--ink-3)}
-.bubble{margin:6px 0 0 40px;background:#E5F3E8;border-radius:12px 12px 12px 4px;padding:10px 12px;color:#1D3B27;font-size:13px;max-width:290px}
-.stars{display:flex;gap:2px;color:#D49B17;margin-top:4px}
-.stars svg{width:14px;height:14px}
-
-.lens-head{display:grid;grid-template-columns:1fr auto;gap:8px;margin-bottom:14px}
-.rx{display:flex;gap:8px;flex-wrap:wrap}
-.rx span{font:500 12px/1 var(--mono);padding:7px 10px;border:1px solid var(--rule);border-radius:8px;color:var(--ink-2)}
-.lens-row{display:grid;grid-template-columns:76px 1fr 64px;gap:14px;align-items:center;padding:14px 0;border-top:1px solid var(--rule)}
-.lens-row .idx{font:500 13px/1.2 var(--mono)}
-.lens-row .idx small{display:block;color:var(--ink-3);font-family:var(--display);font-size:12px;margin-top:3px}
-.edge{height:36px;position:relative}
-.edge svg{width:100%;height:100%}
-.lens-row .mm{font:500 13px/1 var(--mono);text-align:right}
-.lens-row.best{background:linear-gradient(90deg,var(--broto-soft),transparent 80%);margin-inline:-22px;padding-inline:22px}
-.lens-row.best .mm{color:var(--broto-ink)}
-.fine{margin-top:12px;font-size:11.5px;color:var(--ink-3)}
-
-.shop{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.shop-img{aspect-ratio:1;border-radius:14px;background:radial-gradient(120% 90% at 50% 40%,#fff,var(--paper-2));display:grid;place-items:center}
-.shop-img svg{width:82%}
-.shop h4{font-size:17px;letter-spacing:-.02em;font-weight:700}
-.shop .sub{color:var(--ink-3);font-size:12.5px;margin:2px 0 12px}
-.seg{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--rule);border-radius:10px;padding:3px;margin-bottom:12px}
-.seg span{text-align:center;padding:7px 0;border-radius:7px;font-size:12.5px;font-weight:600;color:var(--ink-3)}
-.seg span.on{background:var(--ink);color:var(--paper)}
-.opts{display:grid;gap:6px}
-.opt{display:flex;justify-content:space-between;align-items:center;padding:9px 11px;border:1px solid var(--rule);border-radius:10px;font-size:12.5px}
-.opt small{color:var(--ink-3);font-family:var(--mono);font-size:11px}
-.opt.on{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
-.addcart{margin-top:12px;height:40px;border-radius:10px;background:var(--broto);color:#fff;display:grid;place-items:center;font-weight:700;font-size:13.5px}
-@media (max-width:520px){.shop{grid-template-columns:1fr}.shop-img{aspect-ratio:16/10}}
-
-/* custom */
-.custom{background:var(--ink);color:var(--paper)}
-.custom .sec-head p{color:#BDB8A9}
-.custom h2 em{font-style:normal;color:#7FD39B}
-.jams{list-style:none;border-top:1px solid rgba(243,240,232,.22)}
-.jam{display:grid;grid-template-columns:minmax(0,1.1fr) 40px minmax(0,1fr);gap:24px;align-items:center;padding:20px 0;border-bottom:1px solid rgba(243,240,232,.22);transition:background-color .3s}
-.jam .from{font-size:clamp(19px,2vw,26px);font-weight:600;letter-spacing:-.02em;color:#D9D4C6;text-decoration:line-through;text-decoration-color:rgba(127,211,155,.0);text-decoration-thickness:2px;transition:text-decoration-color .35s,color .35s}
-.jam .arrow{color:#7FD39B;transition:transform .35s var(--ease-out)}
-.jam .arrow svg{width:28px;height:28px}
-.jam .to{font-size:clamp(16px,1.4vw,18px);color:#BDB8A9;transition:color .35s}
-@media (hover:hover){
-  .jam:hover .from{text-decoration-color:rgba(127,211,155,.85);color:#8F8A7C}
-  .jam:hover .to{color:var(--paper)}
-  .jam:hover .arrow{transform:translateX(6px)}
-}
-@media (max-width:760px){.jam{grid-template-columns:1fr;gap:10px}.jam .arrow{display:none}}
-.custom-cta{margin-top:36px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
-.custom-cta p{font-size:20px;font-weight:600;letter-spacing:-.02em;max-width:26em}
-.custom .btn-ink{background:var(--paper);color:var(--ink)}
-.custom .btn-ink:hover{background:#7FD39B}
-
-/* process */
-.process{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);counter-reset:p;border-top:1px solid var(--ink)}
-.process li{padding:22px 24px 0 0;counter-increment:p}
-.process li + li{padding-left:24px;border-left:1px solid var(--rule)}
-.process .n{font:500 13px/1 var(--mono);color:var(--broto-ink)}
-.process .n::before{content:"Etapa " counter(p)}
-.process h3{font-size:26px;margin:18px 0 12px;letter-spacing:-.03em}
-.process p{color:var(--ink-2);font-size:16px}
-.process .out{margin-top:16px;font-size:13px;color:var(--ink-3)}
-.process .out b{color:var(--ink);font-weight:600}
-@media (max-width:900px){.process{grid-template-columns:1fr 1fr}.process li:nth-child(3){padding-left:0;border-left:0}.process li{padding-bottom:28px}}
-@media (max-width:560px){.process{grid-template-columns:1fr}.process li,.process li + li{padding:24px 0;border-left:0;border-bottom:1px solid var(--rule)}}
-
-/* diagnosis */
-.diag{background:var(--sheet);border:1px solid var(--rule);border-radius:24px;padding:clamp(24px,4vw,56px);display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,72px)}
-.diag h2{font-size:clamp(32px,4vw,52px)}
-.diag .intro{margin-top:16px;color:var(--ink-2);max-width:28em}
-.choices{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
-.choice{appearance:none;cursor:pointer;border:1px solid var(--rule-strong);background:transparent;border-radius:999px;padding:11px 18px;font:500 15px/1 var(--display);color:var(--ink);transition:background-color .2s,color .2s,border-color .2s,transform .16s var(--ease-out)}
-.choice:hover{border-color:var(--ink)}
-.choice:active{transform:scale(.97)}
-.choice[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
-.result{border-left:1px solid var(--rule);padding-left:clamp(24px,4vw,56px);display:flex;flex-direction:column;justify-content:center;min-height:240px}
-.result .r-label{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
-.result h3{font-size:clamp(26px,2.6vw,34px);margin:12px 0 14px;letter-spacing:-.03em}
-.result p{color:var(--ink-2)}
-.result .btn{margin-top:28px;align-self:flex-start}
-.result .empty{color:var(--ink-3);font-size:18px;max-width:20em}
-.result.swap{animation:panelIn .45s var(--ease-out) both}
-@media (max-width:860px){.diag{grid-template-columns:1fr}.result{border-left:0;border-top:1px solid var(--rule);padding:28px 0 0;min-height:0}}
-
-/* faq */
-.faq{max-width:860px}
-.faq details{border-bottom:1px solid var(--rule)}
-.faq details:first-child{border-top:1px solid var(--ink)}
-.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:24px;align-items:center;padding:20px 0;font-size:20px;font-weight:600;letter-spacing:-.02em}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary svg{flex:none;width:20px;height:20px;transition:transform .3s var(--ease-out);color:var(--ink-3)}
-.faq details[open] summary svg{transform:rotate(45deg);color:var(--ink)}
-.faq details p{padding:0 0 26px;color:var(--ink-2);max-width:44em}
-
-/* final */
-.final{padding:clamp(56px,8vw,112px) 0;text-align:left}
-.final h2{font-size:clamp(48px,8vw,104px);font-weight:800;letter-spacing:-.045em;line-height:.95;max-width:11em}
-.final h2 em{font-style:normal;color:var(--broto-ink)}
-.final .ctas{margin-top:32px;display:flex;gap:12px;flex-wrap:wrap}
-footer{border-top:1px solid var(--rule);padding:40px 0 56px;color:var(--ink-3);font-size:14px}
-footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
-footer nav{display:flex;gap:22px;flex-wrap:wrap}
-footer a{text-decoration:none}
-footer a:hover{color:var(--ink)}
-
-.wa-float{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:max(16px,env(safe-area-inset-bottom));z-index:50;width:56px;height:56px;border-radius:50%;background:var(--broto);color:#fff;display:grid;place-items:center;box-shadow:0 12px 28px -10px rgba(19,106,52,.6);transition:transform .2s var(--ease-out),opacity .3s;opacity:0;pointer-events:none}
-.wa-float.show{opacity:1;pointer-events:auto}
-.wa-float:active{transform:scale(.94)}
-.wa-float svg{width:26px;height:26px}
-
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
-}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
-
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></symbol>
-  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.8z" fill="currentColor"/></symbol>
-  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.6 8.4c.2-.5.5-.5.8-.5h.5c.2 0 .4 0 .6.5l.7 1.6c.1.2.1.4 0 .6l-.5.7c-.1.2-.1.4 0 .6.6 1 1.4 1.8 2.4 2.4.2.1.4.1.6 0l.7-.5c.2-.1.4-.1.6 0l1.6.7c.4.2.5.4.5.6v.5c0 .3 0 .6-.5.8-.6.3-1.6.6-2.9 0-1.4-.6-3.4-2.2-4.4-4-.9-1.6-.7-2.5-.4-3z" fill="currentColor"/></symbol>
   <symbol id="i-sprout" viewBox="0 0 32 32"><path d="M16 29V15" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" fill="none"/><path d="M16 16c0-6.5 4.6-11 11-11 0 6.4-4.5 11-11 11z" fill="currentColor"/><path d="M16 19.5C16 14.6 12.5 11 7.5 11c0 5 3.6 8.5 8.5 8.5z" fill="currentColor" opacity=".55"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.6 8.4c.2-.5.5-.5.8-.5h.5c.2 0 .4 0 .6.5l.7 1.6c.1.2.1.4 0 .6l-.5.7c-.1.2-.1.4 0 .6.6 1 1.4 1.8 2.4 2.4.2.1.4.1.6 0l.7-.5c.2-.1.4-.1.6 0l1.6.7c.4.2.5.4.5.6v.5c0 .3 0 .6-.5.8-.6.3-1.6.6-2.9 0-1.4-.6-3.4-2.2-4.4-4-.9-1.6-.7-2.5-.4-3z" fill="currentColor"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.8z" fill="currentColor"/></symbol>
+  <symbol id="i-bars" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></symbol>
 </svg>
 
 <header class="nav" id="nav">
   <div class="wrap">
-    <a class="logo" href="#topo" aria-label="Brotta, início">
-      <svg style="color:var(--broto)"><use href="#i-sprout"/></svg>
-      brotta
-    </a>
-    <ul class="nav-links">
-      <li><a href="#produtos">Produtos</a></li>
-      <li><a href="#sob-medida">Sob medida</a></li>
-      <li><a href="#como">Como trabalhamos</a></li>
-      <li><a href="#por-que">Por que existimos</a></li>
-    </ul>
-    <a class="btn btn-ink wa-link" data-msg="Olá, Brotta! Quero conversar sobre um gargalo da minha empresa." href="#" target="_blank" rel="noopener">Fale com a gente</a>
+    <a class="logo" href="/" aria-label="Brotta, início"><svg><use href="#i-sprout"/></svg>brotta</a>
+    <nav class="pills" aria-label="Produtos">
+      <a class="pill" href="/vollta">Vollta</a>
+      <a class="pill" href="/lentiva">Lentiva</a>
+      <a class="pill" href="/shopify">Lojas Shopify</a>
+      <a class="pill" href="/sob-medida">Sob medida</a>
+    </nav>
+    <div class="nav-right">
+      <a class="pill wa wa-link" data-msg="Olá, Brotta! Quero conversar sobre a minha empresa." href="#"><svg><use href="#i-wa"/></svg>WhatsApp</a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><svg class="bars"><use href="#i-bars"/></svg><svg class="x"><use href="#i-x"/></svg></button>
+    </div>
   </div>
 </header>
+<nav class="menu" id="menu" aria-label="Menu">
+  <a href="/vollta">Vollta <svg><use href="#i-arrow"/></svg></a>
+  <a href="/lentiva">Lentiva <svg><use href="#i-arrow"/></svg></a>
+  <a href="/shopify">Lojas Shopify <svg><use href="#i-arrow"/></svg></a>
+  <a href="/sob-medida">Sob medida <svg><use href="#i-arrow"/></svg></a>
+  <a class="btn btn-ink wa-link" data-msg="Olá, Brotta! Quero conversar sobre a minha empresa." href="#"><svg><use href="#i-wa"/></svg> Falar no WhatsApp</a>
+</nav>
 
-<main id="topo">
-
-<!-- HERO -->
-<section class="hero">
+<main>
+<section class="banner" aria-label="Apresentação">
+  <canvas id="field" data-mode="sprout" aria-hidden="true"></canvas>
   <div class="wrap">
-    <div>
-      <h1>Toda empresa trava em algum ponto. <em>A gente destrava.</em></h1>
-      <p class="lede">A Brotta encontra o gargalo que segura a sua operação e constrói o software que faz ela voltar a crescer — com produtos prontos ou feitos sob medida para o seu jeito de trabalhar.</p>
-      <div class="ctas">
-        <a class="btn btn-ink wa-link" data-msg="Olá, Brotta! Quero contar o gargalo da minha empresa." href="#" target="_blank" rel="noopener">
-          <svg><use href="#i-wa"/></svg> Conte seu gargalo
-        </a>
+    <div class="banner-copy">
+      <h1 class="rise">Tecnologia para destravar a sua empresa.</h1>
+      <p class="lede rise d1">A Brotta encontra o ponto em que a sua operação trava e constrói o software que resolve. Com produtos prontos ou feitos sob medida.</p>
+      <div class="ctas rise d2">
+        <a class="btn btn-ink wa-link" data-msg="Olá, Brotta! Quero contar o gargalo da minha empresa." href="#"><svg><use href="#i-wa"/></svg> Falar no WhatsApp</a>
         <a class="btn btn-line" href="#produtos">Ver produtos <svg><use href="#i-arrow"/></svg></a>
       </div>
-      <p class="note">Conversa direta com quem constrói. Sem formulário, sem robô.</p>
     </div>
-
-    <div class="ticket" id="ticket" aria-live="polite">
-      <div class="t-head"><span>Pedido de destrave</span><b class="mono" id="t-num">Nº 0001</b></div>
-      <hr class="t-rule">
-      <div class="t-field"><span class="t-label">Empresa</span><span class="t-val t-swap" id="t-who" style="min-height:0">Loja online</span></div>
-      <div class="t-field"><span class="t-label">Gargalo</span><span class="t-val t-swap" id="t-jam">“Aviso cada cliente no WhatsApp, pedido por pedido, na mão.”</span></div>
-      <div class="t-field"><span class="t-label">Solução</span><span class="t-val carbon t-swap" id="t-fix">Vollta → avisos automáticos por etapa</span></div>
-      <div class="stamp hit" id="stamp" aria-hidden="true">RESOLVIDO<small id="t-date">BROTTA</small></div>
-      <div class="t-dots" role="tablist" aria-label="Exemplos de gargalo"></div>
-    </div>
+    <nav class="offers" aria-label="O que a Brotta faz">
+      <a href="/vollta"><span><b>Vollta</b> · pós-venda automático</span><svg><use href="#i-arrow"/></svg></a>
+      <a href="/lentiva"><span><b>Lentiva</b> · venda de lentes</span><svg><use href="#i-arrow"/></svg></a>
+      <a href="/shopify"><span><b>Lojas Shopify</b> · e-commerce</span><svg><use href="#i-arrow"/></svg></a>
+      <a href="/sob-medida"><span><b>Sob medida</b> · o seu gargalo</span><svg><use href="#i-arrow"/></svg></a>
+    </nav>
   </div>
 </section>
 
-<div class="strip">
-  <div class="wrap">
-    <span><svg><use href="#i-sprout"/></svg><b>Vollta</b> pós-venda que se cuida sozinho</span>
-    <span><svg><use href="#i-sprout"/></svg><b>Lentiva</b> a lente certa no balcão</span>
-    <span><svg><use href="#i-sprout"/></svg><b>Lojas Shopify</b> que vendem de verdade</span>
-    <span><svg><use href="#i-sprout"/></svg><b>Sob medida</b> para o seu gargalo</span>
-  </div>
-</div>
-
-<!-- POR QUE EXISTIMOS -->
-<section class="sec manifesto" id="por-que">
-  <div class="wrap">
-    <p class="big">Brotar é crescer a partir do que já existe. <span class="dim">Sua empresa já tem cliente, equipe e um jeito próprio de vender. O que falta, quase sempre, é tirar do caminho aquilo que prende tudo isso:</span> <em>o gargalo.</em></p>
-
-    <div class="beliefs">
-      <div class="belief">
-        <h3>Gargalo primeiro, tecnologia depois.</h3>
-        <p>Antes de qualquer tela, a gente senta na sua operação e descobre onde o tempo e o dinheiro estão escorrendo.</p>
-      </div>
-      <div class="belief">
-        <h3>Feito para quem está no balcão.</h3>
-        <p>Software que a equipe usa sem treinamento longo, na língua do seu mercado — não na língua de programador.</p>
-      </div>
-      <div class="belief">
-        <h3>Ecossistema, não peça solta.</h3>
-        <p>Cada produto conversa com o outro e com o que você já usa. A empresa cresce junto, sem recomeçar do zero.</p>
-      </div>
-    </div>
-
-    <p class="origin"><svg><use href="#i-sprout"/></svg><span>Nossos produtos não nasceram em apresentação de slides. Nasceram dentro de uma operação real de varejo, resolvendo problemas de verdade — e só depois viraram produto para outras empresas.</span></p>
-  </div>
-</section>
-
-<!-- PRODUTOS -->
 <section class="sec" id="produtos">
   <div class="wrap">
     <div class="sec-head">
-      <h2>Um ecossistema para cada ponto que trava.</h2>
-      <p>Produtos próprios, testados no dia a dia, prontos para entrar na sua operação. Escolha um para ver por dentro.</p>
+      <h2>Produtos que nasceram dentro de uma operação real.</h2>
+      <p>Cada um resolve um ponto que trava o dia a dia de uma empresa. Funcionam sozinhos e se conectam quando faz sentido.</p>
     </div>
-
-    <div class="prod-tabs" role="tablist" aria-label="Produtos Brotta">
-      <button class="prod-tab" role="tab" id="tab-vollta" aria-controls="p-vollta" aria-selected="true">Vollta<span class="tag">pós-venda</span></button>
-      <button class="prod-tab" role="tab" id="tab-lentiva" aria-controls="p-lentiva" aria-selected="false" tabindex="-1">Lentiva<span class="tag">óticas</span></button>
-      <button class="prod-tab" role="tab" id="tab-shopify" aria-controls="p-shopify" aria-selected="false" tabindex="-1">Lojas Shopify<span class="tag">e-commerce</span></button>
-    </div>
-
-    <!-- Vollta -->
-    <div class="panel" role="tabpanel" id="p-vollta" aria-labelledby="tab-vollta">
-      <div class="p-copy">
-        <h3>Vollta</h3>
-        <p class="what">O pós-venda que acompanha cada pedido e faz o cliente voltar.</p>
-        <dl class="gargalo"><dt>Destrava</dt><dd>Cliente perguntando “cadê meu pedido?”, equipe avisando um a um no WhatsApp e avaliação que nunca chega.</dd></dl>
-        <ul>
-          <li><svg><use href="#i-check"/></svg>Avisa o cliente no WhatsApp a cada etapa do pedido, sozinho.</li>
-          <li><svg><use href="#i-check"/></svg>Conecta com a sua loja e com o ERP — Shopify, Vnda, Olist.</li>
-          <li><svg><use href="#i-check"/></svg>Pede avaliação por pedido, com foto, no online e no balcão.</li>
-        </ul>
-        <div class="p-cta">
-          <a class="btn btn-ink wa-link" data-msg="Olá! Quero conhecer o Vollta." href="#" target="_blank" rel="noopener">Quero o Vollta</a>
-          <a class="btn btn-line" href="https://vollta.app" target="_blank" rel="noopener">vollta.app <svg><use href="#i-arrow"/></svg></a>
-        </div>
-      </div>
-      <div class="mock" aria-hidden="true">
-        <div class="mock-bar"><b>Pedido #4821</b><span class="pill"><i></i>automático</span></div>
-        <ol class="steps">
-          <li><span class="dot ok"><svg><use href="#i-check"/></svg></span><div><strong>Pagamento aprovado</strong><span>Mensagem enviada no WhatsApp</span></div><time>09:12</time></li>
-          <li><span class="dot ok"><svg><use href="#i-check"/></svg></span><div><strong>Em separação</strong><span>Cliente avisado</span></div><time>10:40</time></li>
-          <li><span class="dot ok"><svg><use href="#i-check"/></svg></span><div><strong>Enviado</strong><span>Código de rastreio no WhatsApp</span>
-            <div class="bubble" style="margin-left:0">Oi, Ana! Seu pedido saiu para entrega 📦 Acompanhe pelo link de rastreio.</div></div><time>16:05</time></li>
-          <li><span class="dot ok"><svg><use href="#i-check"/></svg></span><div><strong>Avaliação recebida</strong><span class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span></div><time>+3 dias</time></li>
-        </ol>
-      </div>
-    </div>
-
-    <!-- Lentiva -->
-    <div class="panel" role="tabpanel" id="p-lentiva" aria-labelledby="tab-lentiva" hidden>
-      <div class="p-copy">
-        <h3>Lentiva</h3>
-        <p class="what">O painel que ajuda a ótica a vender a lente certa com mais segurança.</p>
-        <dl class="gargalo"><dt>Destrava</dt><dd>Consultor folheando tabela de fabricante, orçamento que demora e cliente que sai sem entender por que pagar mais.</dd></dl>
-        <ul>
-          <li><svg><use href="#i-check"/></svg>Guia de venda por lente, com as tabelas que a própria ótica envia.</li>
-          <li><svg><use href="#i-check"/></svg>Comparáveis entre marcas e demonstrador em etapas para o cliente ver.</li>
-          <li><svg><use href="#i-check"/></svg>Medição de DNP pela foto, para quem não tem pupilômetro.</li>
-        </ul>
-        <div class="p-cta">
-          <a class="btn btn-ink wa-link" data-msg="Olá! Tenho uma ótica e quero conhecer a Lentiva." href="#" target="_blank" rel="noopener">Quero a Lentiva</a>
-          <a class="btn btn-line" href="https://lentiva.app" target="_blank" rel="noopener">lentiva.app <svg><use href="#i-arrow"/></svg></a>
-        </div>
-      </div>
-      <div class="mock" aria-hidden="true">
-        <div class="lens-head">
-          <div class="mock-bar" style="margin:0"><b>Espessura de borda</b></div>
-          <span class="pill"><i></i>demonstrador</span>
-        </div>
-        <div class="rx"><span>OD −4,50</span><span>OE −4,25</span><span>Armação 54□18</span></div>
-        <div style="margin-top:14px">
-          <div class="lens-row"><div class="idx">1.56<small>Índice padrão</small></div><div class="edge"><svg viewBox="0 0 300 36" preserveAspectRatio="none"><path d="M0 2 Q150 14 300 2 L300 34 Q150 22 0 34Z" fill="#D9D5C9"/></svg></div><div class="mm">mais grossa</div></div>
-          <div class="lens-row"><div class="idx">1.67<small>Afinada</small></div><div class="edge"><svg viewBox="0 0 300 36" preserveAspectRatio="none"><path d="M0 7 Q150 15 300 7 L300 29 Q150 21 0 29Z" fill="#C9D9CB"/></svg></div><div class="mm">média</div></div>
-          <div class="lens-row best"><div class="idx">1.74<small>Superfina</small></div><div class="edge"><svg viewBox="0 0 300 36" preserveAspectRatio="none"><path d="M0 11 Q150 16 300 11 L300 25 Q150 20 0 25Z" fill="#1C8C47" opacity=".75"/></svg></div><div class="mm">mais fina</div></div>
-        </div>
-        <p class="fine">Representação ilustrativa da tela de demonstração.</p>
-      </div>
-    </div>
-
-    <!-- Shopify -->
-    <div class="panel" role="tabpanel" id="p-shopify" aria-labelledby="tab-shopify" hidden>
-      <div class="p-copy">
-        <h3>Lojas Shopify</h3>
-        <p class="what">Lojas virtuais pensadas para o produto que você vende — não um tema genérico.</p>
-        <dl class="gargalo"><dt>Destrava</dt><dd>Loja que não converte, produto complexo explicado do jeito errado e migração de plataforma que dá medo.</dd></dl>
-        <ul>
-          <li><svg><use href="#i-check"/></svg>Tema sob medida em cima da base Horizon, rápido e fácil de editar.</li>
-          <li><svg><use href="#i-check"/></svg>Seletores de produto inteligentes — como o de lentes da ótica Artyeto.</li>
-          <li><svg><use href="#i-check"/></svg>Migração de outra plataforma com redirecionamentos e catálogo preservados.</li>
-        </ul>
-        <div class="p-cta">
-          <a class="btn btn-ink wa-link" data-msg="Olá! Quero uma loja Shopify feita pela Brotta." href="#" target="_blank" rel="noopener">Quero minha loja</a>
-        </div>
-      </div>
-      <div class="mock" aria-hidden="true">
-        <div class="shop">
-          <div class="shop-img">
-            <svg viewBox="0 0 200 80"><g fill="none" stroke="#15140F" stroke-width="5" stroke-linecap="round"><rect x="14" y="22" width="70" height="44" rx="20"/><rect x="116" y="22" width="70" height="44" rx="20"/><path d="M84 36 Q100 26 116 36"/><path d="M14 30 L2 24M186 30 L198 24"/></g><g fill="#1C8C47" opacity=".12"><rect x="17" y="25" width="64" height="38" rx="17"/><rect x="119" y="25" width="64" height="38" rx="17"/></g></svg>
+    <div class="products">
+      <a class="prod" href="/vollta">
+        <div class="fig" aria-hidden="true">
+          <div class="mock sm">
+            <div class="mock-bar"><b>Pedido #4821</b><span class="chip"><i></i>automático</span></div>
+            <ol class="steps-m">
+              <li><span class="dot"><svg><use href="#i-check"/></svg></span><div><strong>Pagamento aprovado</strong><span>Mensagem enviada</span></div><time>09:12</time></li>
+              <li><span class="dot"><svg><use href="#i-check"/></svg></span><div><strong>Enviado</strong><span>Rastreio no WhatsApp</span></div><time>16:05</time></li>
+              <li><span class="dot"><svg><use href="#i-check"/></svg></span><div><strong>Avaliação recebida</strong><span class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span></div><time>+3 dias</time></li>
+            </ol>
           </div>
-          <div>
-            <h4>Armação Aurora</h4>
-            <p class="sub">Acetato · Mel</p>
-            <div class="seg"><span class="on">Grau</span><span>Sol</span></div>
-            <div class="opts">
-              <div class="opt"><span>Leve</span><small>1.56</small></div>
-              <div class="opt on"><span>Moderada</span><small>1.59</small></div>
-              <div class="opt"><span>Alta</span><small>1.67</small></div>
+        </div>
+        <div class="txt">
+          <h2>Vollta <small>Pós-venda para lojas</small></h2>
+          <p>Avisa o cliente no WhatsApp a cada etapa do pedido e pede a avaliação. A equipe para de responder "cadê meu pedido?".</p>
+          <span class="arrow">Conhecer o Vollta <svg><use href="#i-arrow"/></svg></span>
+        </div>
+      </a>
+      <a class="prod" href="/lentiva">
+        <div class="fig" aria-hidden="true">
+          <div class="mock sm">
+            <div class="mock-bar"><b>Espessura da lente</b><span class="chip"><i></i>demonstrador</span></div>
+            <div class="rx"><span>OD −4,50</span><span>OE −4,25</span></div>
+            <div class="lens-row"><div class="idx">1.56<small>padrão</small></div><div class="edge"><svg viewBox="0 0 300 36" preserveAspectRatio="none"><path d="M0 2 Q150 14 300 2 L300 34 Q150 22 0 34Z" fill="#D9D5C9"/></svg></div><div class="mm">grossa</div></div>
+            <div class="lens-row best"><div class="idx">1.74<small>superfina</small></div><div class="edge"><svg viewBox="0 0 300 36" preserveAspectRatio="none"><path d="M0 11 Q150 16 300 11 L300 25 Q150 20 0 25Z" fill="#1C8C47" opacity=".75"/></svg></div><div class="mm">fina</div></div>
+          </div>
+        </div>
+        <div class="txt">
+          <h2>Lentiva <small>Venda de lentes para óticas</small></h2>
+          <p>O consultor compara lentes na hora e mostra ao cliente a diferença entre elas. A venda fica mais rápida e mais segura.</p>
+          <span class="arrow">Conhecer a Lentiva <svg><use href="#i-arrow"/></svg></span>
+        </div>
+      </a>
+      <a class="prod" href="/shopify">
+        <div class="fig" aria-hidden="true">
+          <div class="mock sm">
+            <div class="shop">
+              <div class="shop-img"><svg viewBox="0 0 200 80"><g fill="none" stroke="#15140F" stroke-width="5" stroke-linecap="round"><rect x="14" y="22" width="70" height="44" rx="20"/><rect x="116" y="22" width="70" height="44" rx="20"/><path d="M84 36 Q100 26 116 36"/><path d="M14 30 L2 24M186 30 L198 24"/></g><g fill="#1C8C47" opacity=".12"><rect x="17" y="25" width="64" height="38" rx="17"/><rect x="119" y="25" width="64" height="38" rx="17"/></g></svg></div>
+              <div><b class="name">Armação Aurora</b><p class="sub">Acetato · Mel</p><div class="seg"><span class="on">Grau</span><span>Sol</span></div><div class="addcart">Adicionar</div></div>
             </div>
-            <div class="addcart">Adicionar à sacola</div>
           </div>
         </div>
+        <div class="txt">
+          <h2>Lojas Shopify <small>E-commerce sob medida</small></h2>
+          <p>Lojas virtuais feitas para o produto que você vende, com migração de plataforma incluída. Caso Artyeto: Vnda para Shopify.</p>
+          <span class="arrow">Ver como fazemos <svg><use href="#i-arrow"/></svg></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="sec why" id="por-que" style="padding-top:0">
+  <div class="wrap">
+    <p class="big">Brotar é crescer a partir do que já existe. <span class="dim">Sua empresa já tem clientes, equipe e um jeito de vender. Quase sempre, o que falta é tirar do caminho o que prende tudo isso.</span></p>
+    <div class="beliefs">
+      <div><h3>Primeiro o gargalo, depois a tela.</h3><p>Antes de desenhar qualquer sistema, a gente olha a operação e encontra onde o tempo e o dinheiro escorrem.</p></div>
+      <div><h3>Feito para quem está no balcão.</h3><p>A equipe usa sem treinamento longo, na linguagem do seu mercado.</p></div>
+      <div><h3>Conversa com o que você já usa.</h3><p>Loja, ERP, WhatsApp. Cada produto se liga ao resto e a empresa cresce sem recomeçar do zero.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="custom" id="sob-medida">
+  <div class="wrap">
+    <div class="box">
+      <div>
+        <h2>Seu gargalo não está no catálogo? <em>A gente constrói.</em></h2>
+        <p class="lead">Painéis, integrações e automações feitos para o jeito que a sua empresa funciona.</p>
+        <div class="ctas">
+          <a class="btn btn-paper wa-link" data-msg="Olá, Brotta! Preciso de um sistema sob medida." href="#"><svg><use href="#i-wa"/></svg> Contar o meu caso</a>
+          <a class="btn btn-ghost" href="/sob-medida">Como funciona <svg><use href="#i-arrow"/></svg></a>
+        </div>
       </div>
+      <ul class="jams">
+        <li><span class="from">Planilha que só uma pessoa entende</span><svg><use href="#i-arrow"/></svg><span class="to">Painel com os números certos, para toda a equipe</span></li>
+        <li><span class="from">Sistemas que não se falam</span><svg><use href="#i-arrow"/></svg><span class="to">Loja, ERP e estoque integrados, sem digitar duas vezes</span></li>
+        <li><span class="from">Atendimento no improviso</span><svg><use href="#i-arrow"/></svg><span class="to">Mensagens automáticas no momento certo de cada cliente</span></li>
+        <li><span class="from">Decisão no escuro</span><svg><use href="#i-arrow"/></svg><span class="to">Relatórios que mostram onde a empresa ganha e perde</span></li>
+      </ul>
     </div>
   </div>
 </section>
 
-<!-- SOB MEDIDA -->
-<section class="sec custom" id="sob-medida">
+<section class="sec" id="como" style="padding-top:0">
   <div class="wrap">
     <div class="sec-head">
-      <h2>Seu gargalo não está no catálogo? <em>A gente constrói.</em></h2>
-      <p>Além dos nossos produtos, desenvolvemos sistemas personalizados para empresas — do painel interno à integração entre plataformas que hoje não se falam.</p>
+      <h2>Como um projeto acontece.</h2>
+      <p>Quatro etapas curtas. Você sabe o que está sendo feito e o que muda na operação a cada passo.</p>
     </div>
-    <ul class="jams">
-      <li class="jam"><span class="from">Planilha que só uma pessoa entende</span><span class="arrow"><svg><use href="#i-arrow"/></svg></span><span class="to">Painel com os números certos, para toda a equipe, em tempo real.</span></li>
-      <li class="jam"><span class="from">Sistemas que não conversam</span><span class="arrow"><svg><use href="#i-arrow"/></svg></span><span class="to">Integração entre loja, ERP, estoque e financeiro, sem digitar duas vezes.</span></li>
-      <li class="jam"><span class="from">Atendimento no improviso</span><span class="arrow"><svg><use href="#i-arrow"/></svg></span><span class="to">Fluxos automáticos de WhatsApp e e-mail no momento certo de cada cliente.</span></li>
-      <li class="jam"><span class="from">Processo que depende de memória</span><span class="arrow"><svg><use href="#i-arrow"/></svg></span><span class="to">Ferramenta interna que guia a equipe passo a passo e não deixa nada cair.</span></li>
-      <li class="jam"><span class="from">Decisão no escuro</span><span class="arrow"><svg><use href="#i-arrow"/></svg></span><span class="to">Relatórios que mostram onde a empresa ganha e onde perde dinheiro.</span></li>
-    </ul>
-    <div class="custom-cta">
-      <p>Você conta o problema do jeito que ele acontece. A gente traduz em sistema.</p>
-      <a class="btn btn-ink wa-link" data-msg="Olá, Brotta! Preciso de um sistema sob medida." href="#" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg> Pedir um projeto sob medida</a>
-    </div>
-  </div>
-</section>
-
-<!-- COMO TRABALHAMOS -->
-<section class="sec" id="como">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2>Do gargalo à evolução, em quatro etapas.</h2>
-      <p>Um caminho curto e transparente. Você sabe o que está sendo feito, por quê, e o que muda na sua operação a cada passo.</p>
-    </div>
-    <ol class="process">
-      <li><span class="n mono"></span><h3>Diagnóstico</h3><p>Conversamos com quem opera, acompanhamos a rotina e achamos o ponto que mais trava.</p><p class="out">Você recebe: <b>o mapa do gargalo</b></p></li>
-      <li><span class="n mono"></span><h3>Desenho</h3><p>Propomos a solução — produto pronto, adaptação ou sistema novo — com escopo e prazo claros.</p><p class="out">Você recebe: <b>a proposta e o protótipo</b></p></li>
-      <li><span class="n mono"></span><h3>Construção</h3><p>Construímos em entregas curtas, testando com a sua equipe no uso real, não em teoria.</p><p class="out">Você recebe: <b>o sistema funcionando</b></p></li>
-      <li><span class="n mono"></span><h3>Evolução</h3><p>Acompanhamos os resultados e ajustamos. Destravou um ponto? Partimos para o próximo.</p><p class="out">Você recebe: <b>uma empresa que cresce</b></p></li>
+    <ol class="steps">
+      <li><h3>Diagnóstico</h3><p>Conversamos com quem opera e encontramos o ponto que mais trava.</p><p class="out">Você recebe <b>o mapa do gargalo</b></p></li>
+      <li><h3>Desenho</h3><p>Propomos a solução, com escopo, prazo e investimento antes de qualquer código.</p><p class="out">Você recebe <b>a proposta e o protótipo</b></p></li>
+      <li><h3>Construção</h3><p>Entregas curtas, testadas com a sua equipe no uso real.</p><p class="out">Você recebe <b>o sistema funcionando</b></p></li>
+      <li><h3>Evolução</h3><p>Acompanhamos os resultados e ajustamos. Destravou um ponto, vamos ao próximo.</p><p class="out">Você recebe <b>uma operação que cresce</b></p></li>
     </ol>
   </div>
 </section>
 
-<!-- DIAGNÓSTICO -->
-<section class="sec" style="padding-top:0" id="diagnostico">
-  <div class="wrap">
-    <div class="diag">
-      <div>
-        <h2>Onde a sua empresa trava hoje?</h2>
-        <p class="intro">Escolha a área que mais dói. A gente mostra por onde começar — e você já manda a conversa pronta no WhatsApp.</p>
-        <div class="choices" role="group" aria-label="Área do gargalo">
-          <button class="choice" aria-pressed="false" data-k="pos">Pós-venda</button>
-          <button class="choice" aria-pressed="false" data-k="balcao">Venda no balcão</button>
-          <button class="choice" aria-pressed="false" data-k="loja">Loja online</button>
-          <button class="choice" aria-pressed="false" data-k="integra">Sistemas e integrações</button>
-          <button class="choice" aria-pressed="false" data-k="gestao">Gestão e números</button>
-          <button class="choice" aria-pressed="false" data-k="outro">Outro ponto</button>
-        </div>
-      </div>
-      <div class="result" id="result" aria-live="polite">
-        <p class="empty">Escolha uma área ao lado para ver o caminho sugerido.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="sec" style="padding-top:0">
-  <div class="wrap">
-    <div class="sec-head"><h2>Perguntas frequentes</h2><p></p></div>
-    <div class="faq">
-      <details><summary>Preciso trocar os sistemas que já uso?<svg><use href="#i-plus"/></svg></summary><p>Quase nunca. A ideia é conectar o que você já tem e resolver o ponto que trava. Só sugerimos trocar quando a ferramenta atual é o próprio gargalo.</p></details>
-      <details><summary>Atendem empresas de qualquer tamanho?<svg><use href="#i-plus"/></svg></summary><p>Nosso foco são pequenas e médias empresas — especialmente varejo, óticas e e-commerce — onde um gargalo resolvido muda o mês inteiro.</p></details>
-      <details><summary>Como funciona um projeto sob medida?<svg><use href="#i-plus"/></svg></summary><p>Começa com um diagnóstico. Depois apresentamos escopo, prazo e investimento antes de qualquer linha de código. Você aprova cada etapa.</p></details>
-      <details><summary>Posso começar só com um produto?<svg><use href="#i-plus"/></svg></summary><p>Pode. Vollta, Lentiva e as lojas Shopify funcionam sozinhos. Quando fizer sentido, eles se conectam e formam o seu ecossistema.</p></details>
-    </div>
-  </div>
-</section>
-
-<!-- FINAL -->
 <section class="final">
   <div class="wrap">
-    <h2>Qual é o gargalo que a gente vai <em>destravar</em> primeiro?</h2>
+    <h2>Qual gargalo a gente <em>destrava</em> primeiro?</h2>
     <div class="ctas">
-      <a class="btn btn-ink wa-link" data-msg="Olá, Brotta! Quero destravar minha empresa." href="#" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg> Conversar no WhatsApp</a>
-      <a class="btn btn-line" href="#diagnostico">Fazer o diagnóstico rápido</a>
+      <a class="btn btn-ink wa-link" data-msg="Olá, Brotta! Quero destravar a minha empresa." href="#"><svg><use href="#i-wa"/></svg> Falar no WhatsApp</a>
     </div>
+    <p class="note">Conversa direta com quem constrói. Sem formulário.</p>
   </div>
 </section>
 </main>
 
 <footer>
   <div class="wrap">
-    <a class="logo" href="#topo" style="font-size:18px"><svg style="color:var(--broto);width:24px;height:24px"><use href="#i-sprout"/></svg>brotta</a>
-    <nav aria-label="Rodapé">
-      <a href="#produtos">Produtos</a><a href="#sob-medida">Sob medida</a><a href="#como">Como trabalhamos</a><a href="https://vollta.app" target="_blank" rel="noopener">Vollta</a><a href="https://lentiva.app" target="_blank" rel="noopener">Lentiva</a>
-    </nav>
-    <span>© <span id="yr">2026</span> Brotta Ecossistemas Digitais LTDA · CNPJ 69.959.244/0001-00</span>
+    <div class="top">
+      <div>
+        <a class="logo" href="/"><svg><use href="#i-sprout"/></svg>brotta</a>
+        <p class="tag">Software para resolver o gargalo da sua empresa e ajudar ela a evoluir.</p>
+      </div>
+      <div><h4>Produtos</h4><ul><li><a href="/vollta">Vollta</a></li><li><a href="/lentiva">Lentiva</a></li><li><a href="/shopify">Lojas Shopify</a></li><li><a href="/sob-medida">Sob medida</a></li></ul></div>
+      <div><h4>Acesse</h4><ul><li><a href="https://vollta.app" target="_blank" rel="noopener">vollta.app</a></li><li><a href="https://lentiva.app" target="_blank" rel="noopener">lentiva.app</a></li></ul></div>
+      <div><h4>Contato</h4><ul><li><a class="wa-link" data-msg="Olá, Brotta!" href="#">WhatsApp (11) 91272-8420</a></li><li><a href="/#como">Como trabalhamos</a></li></ul></div>
+    </div>
+    <div class="legal"><span>© <span id="yr">2026</span> Brotta Ecossistemas Digitais LTDA</span><span>CNPJ 69.959.244/0001-00 · São Paulo, SP</span></div>
   </div>
 </footer>
 
-<a class="wa-float wa-link" id="waFloat" data-msg="Olá, Brotta!" href="#" target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg><use href="#i-wa"/></svg></a>
+<a class="wa-float wa-link" id="waFloat" data-msg="Olá, Brotta!" href="#" aria-label="Falar no WhatsApp"><svg><use href="#i-wa"/></svg></a>
 
-<script>
-(() => {
-  // >>> Troque pelo WhatsApp real da Brotta (DDI + DDD + número, só dígitos)
-  const WHATSAPP = "5511912728420";
-  const wa = msg => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`;
-  document.querySelectorAll(".wa-link").forEach(a => a.href = wa(a.dataset.msg || "Olá, Brotta!"));
-  document.getElementById("yr").textContent = new Date().getFullYear();
-
-  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  // nav border + floating button
-  const nav = document.getElementById("nav"), fl = document.getElementById("waFloat");
-  const onScroll = () => { const y = scrollY; nav.classList.toggle("scrolled", y > 8); fl.classList.toggle("show", y > innerHeight * .9); };
-  addEventListener("scroll", onScroll, {passive:true}); onScroll();
-
-  // ---- hero ticket: cycle of gargalos, each stamped RESOLVIDO ----
-  const tickets = [
-    {who:"Loja online", jam:"“Aviso cada cliente no WhatsApp, pedido por pedido, na mão.”", fix:"Vollta → avisos automáticos por etapa"},
-    {who:"Ótica de bairro", jam:"“O consultor demora para achar a lente certa na tabela.”", fix:"Lentiva → guia de venda por lente"},
-    {who:"Marca de óculos", jam:"“A loja virtual não explica as opções de lente e não vende.”", fix:"Shopify → seletor de lentes no produto"},
-    {who:"Distribuidora", jam:"“Pedido entra em três sistemas e alguém digita tudo de novo.”", fix:"Sob medida → integração ERP + loja"}
-  ];
-  const $ = id => document.getElementById(id);
-  const who=$("t-who"), jam=$("t-jam"), fix=$("t-fix"), num=$("t-num"), stamp=$("stamp");
-  const dots = document.querySelector(".t-dots");
-  let i = 0, timer;
-  tickets.forEach((t,k) => { const b = document.createElement("button"); b.setAttribute("aria-label", `Exemplo ${k+1}: ${t.who}`); b.addEventListener("click", () => { show(k); restart(); }); dots.appendChild(b); });
-  function paintDots(){ [...dots.children].forEach((d,k)=>d.setAttribute("aria-current", k===i)); }
-  function show(k){
-    i = k; const t = tickets[k];
-    const els=[who,jam,fix];
-    stamp.classList.remove("hit"); stamp.classList.add("lift");
-    els.forEach(e=>e.classList.add("out"));
-    setTimeout(() => {
-      who.textContent=t.who; jam.textContent=t.jam; fix.textContent=t.fix;
-      num.textContent = "Nº " + String(k+1).padStart(4,"0");
-      els.forEach(e=>e.classList.remove("out"));
-      setTimeout(()=>{ stamp.classList.remove("lift"); void stamp.offsetWidth; stamp.classList.add("hit"); }, reduce ? 0 : 520);
-    }, reduce ? 0 : 320);
-    paintDots();
-  }
-  function restart(){ clearInterval(timer); if(!reduce) timer = setInterval(()=>show((i+1)%tickets.length), 4200); }
-  paintDots(); restart();
-  document.addEventListener("visibilitychange", () => document.hidden ? clearInterval(timer) : restart());
-
-  // ---- product tabs (ARIA tabs, arrow keys) ----
-  const tabs=[...document.querySelectorAll(".prod-tab")];
-  function select(tab, focus){
-    tabs.forEach(t=>{ const on=t===tab; t.setAttribute("aria-selected",on); t.tabIndex=on?0:-1; const p=$(t.getAttribute("aria-controls")); p.hidden=!on; if(on){p.classList.remove("enter"); void p.offsetWidth; p.classList.add("enter");} });
-    if(focus) tab.focus();
-  }
-  tabs.forEach((t,k)=>{
-    t.addEventListener("click",()=>select(t));
-    t.addEventListener("keydown",e=>{ if(e.key==="ArrowRight"||e.key==="ArrowLeft"){ e.preventDefault(); select(tabs[(k+(e.key==="ArrowRight"?1:-1)+tabs.length)%tabs.length],true);} });
-  });
-
-  // ---- diagnosis ----
-  const D = {
-    pos:{t:"Comece pelo Vollta.", p:"Avisos automáticos por etapa do pedido, avaliações com foto e o cliente voltando a comprar — sem ninguém da equipe parado no WhatsApp.", m:"Olá, Brotta! Meu gargalo é o pós-venda. Quero entender como o Vollta pode ajudar."},
-    balcao:{t:"Comece pela Lentiva — ou um painel de venda sob medida.", p:"Se você tem ótica, a Lentiva guia o consultor lente por lente. Em outro segmento, desenhamos um guia de venda para o seu balcão.", m:"Olá, Brotta! Meu gargalo é a venda no balcão. Quero conversar sobre Lentiva / painel de venda."},
-    loja:{t:"Comece por uma loja Shopify sob medida.", p:"Tema rápido, produto bem explicado e seletores que ajudam o cliente a decidir. Se já tem loja em outra plataforma, cuidamos da migração.", m:"Olá, Brotta! Meu gargalo é a loja online. Quero falar sobre uma loja Shopify."},
-    integra:{t:"Comece por uma integração sob medida.", p:"Ligamos loja, ERP, estoque e financeiro para o dado entrar uma vez só e aparecer onde precisa.", m:"Olá, Brotta! Meu gargalo são sistemas que não conversam. Quero um projeto de integração."},
-    gestao:{t:"Comece por um painel de gestão.", p:"Os números que importam, atualizados sozinhos, num lugar que toda a equipe entende — para decidir com dado, não com achismo.", m:"Olá, Brotta! Meu gargalo é a gestão e os números. Quero um painel sob medida."},
-    outro:{t:"Comece pelo diagnóstico.", p:"Conte o problema do jeito que ele acontece no dia a dia. A gente acha o ponto que trava e propõe o caminho.", m:"Olá, Brotta! Quero contar um gargalo da minha empresa."}
-  };
-  const res=$("result");
-  document.querySelectorAll(".choice").forEach(b=>b.addEventListener("click",()=>{
-    document.querySelectorAll(".choice").forEach(x=>x.setAttribute("aria-pressed", x===b));
-    const d=D[b.dataset.k];
-    res.innerHTML = `<span class="r-label">Caminho sugerido</span><h3></h3><p></p><a class="btn btn-ink" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg> Mandar no WhatsApp</a>`;
-    res.querySelector("h3").textContent=d.t; res.querySelector("p").textContent=d.p; res.querySelector("a").href=wa(d.m);
-    res.classList.remove("swap"); void res.offsetWidth; res.classList.add("swap");
-  }));
-})();
-</script>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/field.js" defer></script>
 </body>
 </html>

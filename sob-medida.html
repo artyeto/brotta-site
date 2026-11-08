@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sistemas sob medida | Brotta</title>
+<meta name="description" content="Painéis, integrações e automações feitos para o gargalo da sua empresa. Diagnóstico, proposta e entregas curtas.">
+<meta name="theme-color" content="#F3F0E8">
+<meta property="og:title" content="Sistemas sob medida · Brotta">
+<meta property="og:description" content="Painéis, integrações e automações feitos para o gargalo da sua empresa.">
+<meta property="og:url" content="https://brotta.online/sob-medida">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-sprout" viewBox="0 0 32 32"><path d="M16 29V15" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" fill="none"/><path d="M16 16c0-6.5 4.6-11 11-11 0 6.4-4.5 11-11 11z" fill="currentColor"/><path d="M16 19.5C16 14.6 12.5 11 7.5 11c0 5 3.6 8.5 8.5 8.5z" fill="currentColor" opacity=".55"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.6 8.4c.2-.5.5-.5.8-.5h.5c.2 0 .4 0 .6.5l.7 1.6c.1.2.1.4 0 .6l-.5.7c-.1.2-.1.4 0 .6.6 1 1.4 1.8 2.4 2.4.2.1.4.1.6 0l.7-.5c.2-.1.4-.1.6 0l1.6.7c.4.2.5.4.5.6v.5c0 .3 0 .6-.5.8-.6.3-1.6.6-2.9 0-1.4-.6-3.4-2.2-4.4-4-.9-1.6-.7-2.5-.4-3z" fill="currentColor"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-bars" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></symbol>
+</svg>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="logo" href="/" aria-label="Brotta, início"><svg><use href="#i-sprout"/></svg>brotta</a>
+    <nav class="pills" aria-label="Produtos">
+      <a class="pill" href="/vollta">Vollta</a>
+      <a class="pill" href="/lentiva">Lentiva</a>
+      <a class="pill" href="/shopify">Lojas Shopify</a>
+      <a class="pill" href="/sob-medida" aria-current="page">Sob medida</a>
+    </nav>
+    <div class="nav-right">
+      <a class="pill wa wa-link" data-msg="Olá, Brotta! Preciso de um sistema sob medida." href="#"><svg><use href="#i-wa"/></svg>WhatsApp</a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><svg class="bars"><use href="#i-bars"/></svg><svg class="x"><use href="#i-x"/></svg></button>
+    </div>
+  </div>
+</header>
+<nav class="menu" id="menu" aria-label="Menu">
+  <a href="/vollta">Vollta <svg><use href="#i-arrow"/></svg></a>
+  <a href="/lentiva">Lentiva <svg><use href="#i-arrow"/></svg></a>
+  <a href="/shopify">Lojas Shopify <svg><use href="#i-arrow"/></svg></a>
+  <a href="/sob-medida" aria-current="page">Sob medida <svg><use href="#i-arrow"/></svg></a>
+  <a class="btn btn-ink wa-link" data-msg="Olá, Brotta! Preciso de um sistema sob medida." href="#"><svg><use href="#i-wa"/></svg> Falar no WhatsApp</a>
+</nav>
+
+<main>
+<section class="p-hero">
+  <canvas id="field" data-mode="drift" aria-hidden="true"></canvas>
+  <div class="wrap grid">
+    <div>
+      <h1>Sob medida</h1>
+      <p class="what">Sistemas feitos para o gargalo da sua empresa. Painéis, integrações e automações que seguem o jeito que você já trabalha.</p>
+      <div class="ctas">
+        <a class="btn btn-ink wa-link" data-msg="Olá, Brotta! Preciso de um sistema sob medida." href="#"><svg><use href="#i-wa"/></svg> Contar o meu caso</a>
+        <a class="btn btn-line" href="#diagnostico">Diagnóstico rápido <svg><use href="#i-arrow"/></svg></a>
+      </div>
+      <p class="meta"><span>Escopo e prazo <b>antes do código</b></span><span>Entregas <b>curtas</b></span><span>Você aprova <b>cada etapa</b></span></p>
+    </div>
+    <div class="mock" aria-hidden="true">
+      <div class="mock-bar"><b>Painel da operação</b><span class="chip"><i></i>atualizado agora</span></div>
+      <div class="panel-m">
+        <div class="kpi"><b>132</b><span>pedidos hoje</span></div>
+        <div class="kpi"><b>7</b><span>aguardando separação</span></div>
+      </div>
+      <ul class="flow">
+        <li><i></i>Loja → ERP<span>sincronizado</span></li>
+        <li><i></i>ERP → estoque<span>sincronizado</span></li>
+        <li><i></i>Financeiro<span>fechamento 18h</span></li>
+      </ul>
+      <p class="fine">Exemplo ilustrativo de um painel integrado.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Gargalos que já viraram sistema.</h2>
+      <p>Alguns pontos que travam uma empresa e o que costuma resolver cada um.</p>
+    </div>
+    <div class="custom" style="padding:0">
+      <div class="box">
+        <div>
+          <h2>Você conta o problema do jeito que ele acontece. <em>A gente traduz em sistema.</em></h2>
+          <p class="lead">Sem jargão de TI. A conversa é sobre a sua operação, e o sistema nasce dela.</p>
+          <div class="ctas"><a class="btn btn-paper wa-link" data-msg="Olá, Brotta! Preciso de um sistema sob medida." href="#"><svg><use href="#i-wa"/></svg> Falar no WhatsApp</a></div>
+        </div>
+        <ul class="jams">
+          <li><span class="from">Planilha que só uma pessoa entende</span><svg><use href="#i-arrow"/></svg><span class="to">Painel com os números certos, para toda a equipe, em tempo real</span></li>
+          <li><span class="from">Sistemas que não se falam</span><svg><use href="#i-arrow"/></svg><span class="to">Integração entre loja, ERP, estoque e financeiro, sem digitar duas vezes</span></li>
+          <li><span class="from">Atendimento no improviso</span><svg><use href="#i-arrow"/></svg><span class="to">Fluxos automáticos de WhatsApp e e-mail no momento certo de cada cliente</span></li>
+          <li><span class="from">Processo que depende de memória</span><svg><use href="#i-arrow"/></svg><span class="to">Ferramenta interna que guia a equipe passo a passo</span></li>
+          <li><span class="from">Decisão no escuro</span><svg><use href="#i-arrow"/></svg><span class="to">Relatórios que mostram onde a empresa ganha e onde perde dinheiro</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0" id="como">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Como um projeto acontece.</h2>
+      <p>Quatro etapas curtas. Você sabe o que está sendo feito e o que muda na operação a cada passo.</p>
+    </div>
+    <ol class="steps">
+      <li><h3>Diagnóstico</h3><p>Conversamos com quem opera, acompanhamos a rotina e encontramos o ponto que mais trava.</p><p class="out">Você recebe <b>o mapa do gargalo</b></p></li>
+      <li><h3>Desenho</h3><p>Propomos a solução, com escopo, prazo e investimento antes de qualquer código.</p><p class="out">Você recebe <b>a proposta e o protótipo</b></p></li>
+      <li><h3>Construção</h3><p>Entregas curtas, testadas com a sua equipe no uso real.</p><p class="out">Você recebe <b>o sistema funcionando</b></p></li>
+      <li><h3>Evolução</h3><p>Acompanhamos os resultados e ajustamos. Destravou um ponto, vamos ao próximo.</p><p class="out">Você recebe <b>uma operação que cresce</b></p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0" id="diagnostico">
+  <div class="wrap">
+    <div class="diag">
+      <div>
+        <h2>Onde a sua empresa trava hoje?</h2>
+        <p class="intro">Escolha a área que mais dói. A gente sugere por onde começar e você manda a conversa pronta no WhatsApp.</p>
+        <div class="choices" role="group" aria-label="Área do gargalo">
+          <button class="choice" aria-pressed="false" data-k="pos">Pós-venda</button>
+          <button class="choice" aria-pressed="false" data-k="balcao">Venda no balcão</button>
+          <button class="choice" aria-pressed="false" data-k="loja">Loja online</button>
+          <button class="choice" aria-pressed="false" data-k="integra">Sistemas e integrações</button>
+          <button class="choice" aria-pressed="false" data-k="gestao">Gestão e números</button>
+          <button class="choice" aria-pressed="false" data-k="outro">Outro ponto</button>
+        </div>
+      </div>
+      <div class="result" id="result" aria-live="polite">
+        <p class="empty">Escolha uma área para ver o caminho sugerido.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><h2>Perguntas frequentes</h2></div>
+    <div class="faq">
+      <details><summary>Como funciona um projeto sob medida?<svg><use href="#i-plus"/></svg></summary><p>Começa com um diagnóstico. Depois apresentamos escopo, prazo e investimento antes de qualquer linha de código. Você aprova cada etapa.</p></details>
+      <details><summary>Preciso trocar os sistemas que já uso?<svg><use href="#i-plus"/></svg></summary><p>Quase nunca. A ideia é conectar o que você já tem e resolver o ponto que trava. Só sugerimos trocar quando a ferramenta atual é o próprio gargalo.</p></details>
+      <details><summary>Atendem empresas de qualquer tamanho?<svg><use href="#i-plus"/></svg></summary><p>O foco são pequenas e médias empresas, em especial varejo, óticas e e-commerce, onde um gargalo resolvido muda o mês inteiro.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Qual gargalo a gente <em>destrava</em> primeiro?</h2>
+    <div class="ctas">
+      <a class="btn btn-ink wa-link" data-msg="Olá, Brotta! Preciso de um sistema sob medida." href="#"><svg><use href="#i-wa"/></svg> Falar no WhatsApp</a>
+    </div>
+    <p class="note">Conversa direta com quem constrói. Sem formulário.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <a class="logo" href="/"><svg><use href="#i-sprout"/></svg>brotta</a>
+        <p class="tag">Software para resolver o gargalo da sua empresa e ajudar ela a evoluir.</p>
+      </div>
+      <div><h4>Produtos</h4><ul><li><a href="/vollta">Vollta</a></li><li><a href="/lentiva">Lentiva</a></li><li><a href="/shopify">Lojas Shopify</a></li><li><a href="/sob-medida">Sob medida</a></li></ul></div>
+      <div><h4>Acesse</h4><ul><li><a href="https://vollta.app" target="_blank" rel="noopener">vollta.app</a></li><li><a href="https://lentiva.app" target="_blank" rel="noopener">lentiva.app</a></li></ul></div>
+      <div><h4>Contato</h4><ul><li><a class="wa-link" data-msg="Olá, Brotta!" href="#">WhatsApp (11) 91272-8420</a></li><li><a href="/sob-medida#como">Como trabalhamos</a></li></ul></div>
+    </div>
+    <div class="legal"><span>© <span id="yr">2026</span> Brotta Ecossistemas Digitais LTDA</span><span>CNPJ 69.959.244/0001-00 · São Paulo, SP</span></div>
+  </div>
+</footer>
+
+<a class="wa-float wa-link" id="waFloat" data-msg="Olá, Brotta! Preciso de um sistema sob medida." href="#" aria-label="Falar no WhatsApp"><svg><use href="#i-wa"/></svg></a>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/field.js" defer></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const WHATSAPP = "5511912728420";
+  const wa = m => `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(m)}`;
+  const D = {
+    pos:{t:"Comece pelo Vollta.", p:"Avisos automáticos por etapa do pedido e avaliação com foto. Ninguém da equipe fica parado no WhatsApp.", m:"Olá, Brotta! Meu gargalo é o pós-venda. Quero entender como o Vollta pode ajudar."},
+    balcao:{t:"Comece pela Lentiva ou por um painel de venda sob medida.", p:"Se você tem ótica, a Lentiva guia o consultor lente por lente. Em outro segmento, desenhamos um guia de venda para o seu balcão.", m:"Olá, Brotta! Meu gargalo é a venda no balcão. Quero conversar sobre Lentiva ou um painel de venda."},
+    loja:{t:"Comece por uma loja Shopify sob medida.", p:"Tema rápido, produto bem explicado e seletores que ajudam o cliente a decidir. Se já tem loja em outra plataforma, cuidamos da migração.", m:"Olá, Brotta! Meu gargalo é a loja online. Quero falar sobre uma loja Shopify."},
+    integra:{t:"Comece por uma integração sob medida.", p:"Ligamos loja, ERP, estoque e financeiro para o dado entrar uma vez só e aparecer onde precisa.", m:"Olá, Brotta! Meu gargalo são sistemas que não conversam. Quero um projeto de integração."},
+    gestao:{t:"Comece por um painel de gestão.", p:"Os números que importam, atualizados sozinhos, num lugar que toda a equipe entende.", m:"Olá, Brotta! Meu gargalo é a gestão e os números. Quero um painel sob medida."},
+    outro:{t:"Comece pelo diagnóstico.", p:"Conte o problema do jeito que ele acontece no dia a dia. A gente acha o ponto que trava e propõe o caminho.", m:"Olá, Brotta! Quero contar um gargalo da minha empresa."}
+  };
+  const res = document.getElementById("result");
+  document.querySelectorAll(".choice").forEach(b => b.addEventListener("click", () => {
+    document.querySelectorAll(".choice").forEach(x => x.setAttribute("aria-pressed", x === b));
+    const d = D[b.dataset.k];
+    res.innerHTML = `<h3></h3><p></p><a class="btn btn-ink" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg> Mandar no WhatsApp</a>`;
+    res.querySelector("h3").textContent = d.t; res.querySelector("p").textContent = d.p; res.querySelector("a").href = wa(d.m);
+    res.classList.remove("swap"); void res.offsetWidth; res.classList.add("swap");
+  }));
+});
+</script>
+</body>
+</html>

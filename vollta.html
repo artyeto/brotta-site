@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vollta · Pós-venda automático para lojas | Brotta</title>
+<meta name="description" content="O Vollta avisa o cliente no WhatsApp a cada etapa do pedido e pede a avaliação. Integra com Shopify, Vnda e Olist.">
+<meta name="theme-color" content="#F3F0E8">
+<meta property="og:title" content="Vollta · Pós-venda automático para lojas">
+<meta property="og:description" content="Avisa o cliente no WhatsApp a cada etapa do pedido e pede a avaliação.">
+<meta property="og:url" content="https://brotta.online/vollta">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-sprout" viewBox="0 0 32 32"><path d="M16 29V15" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" fill="none"/><path d="M16 16c0-6.5 4.6-11 11-11 0 6.4-4.5 11-11 11z" fill="currentColor"/><path d="M16 19.5C16 14.6 12.5 11 7.5 11c0 5 3.6 8.5 8.5 8.5z" fill="currentColor" opacity=".55"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.6 8.4c.2-.5.5-.5.8-.5h.5c.2 0 .4 0 .6.5l.7 1.6c.1.2.1.4 0 .6l-.5.7c-.1.2-.1.4 0 .6.6 1 1.4 1.8 2.4 2.4.2.1.4.1.6 0l.7-.5c.2-.1.4-.1.6 0l1.6.7c.4.2.5.4.5.6v.5c0 .3 0 .6-.5.8-.6.3-1.6.6-2.9 0-1.4-.6-3.4-2.2-4.4-4-.9-1.6-.7-2.5-.4-3z" fill="currentColor"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.8z" fill="currentColor"/></symbol>
+  <symbol id="i-bars" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></symbol>
+  <symbol id="i-msg" viewBox="0 0 24 24"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.5 3.5V17H6.5A2.5 2.5 0 0 1 4 14.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 9h8M8 12.5h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8.5A1.5 1.5 0 0 1 5.5 7H8l1.5-2h5L16 7h2.5A1.5 1.5 0 0 1 20 8.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 17.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="13" r="3.2" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+</svg>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="logo" href="/" aria-label="Brotta, início"><svg><use href="#i-sprout"/></svg>brotta</a>
+    <nav class="pills" aria-label="Produtos">
+      <a class="pill" href="/vollta" aria-current="page">Vollta</a>
+      <a class="pill" href="/lentiva">Lentiva</a>
+      <a class="pill" href="/shopify">Lojas Shopify</a>
+      <a class="pill" href="/sob-medida">Sob medida</a>
+    </nav>
+    <div class="nav-right">
+      <a class="pill wa wa-link" data-msg="Olá! Quero conhecer o Vollta." href="#"><svg><use href="#i-wa"/></svg>WhatsApp</a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><svg class="bars"><use href="#i-bars"/></svg><svg class="x"><use href="#i-x"/></svg></button>
+    </div>
+  </div>
+</header>
+<nav class="menu" id="menu" aria-label="Menu">
+  <a href="/vollta" aria-current="page">Vollta <svg><use href="#i-arrow"/></svg></a>
+  <a href="/lentiva">Lentiva <svg><use href="#i-arrow"/></svg></a>
+  <a href="/shopify">Lojas Shopify <svg><use href="#i-arrow"/></svg></a>
+  <a href="/sob-medida">Sob medida <svg><use href="#i-arrow"/></svg></a>
+  <a class="btn btn-ink wa-link" data-msg="Olá! Quero conhecer o Vollta." href="#"><svg><use href="#i-wa"/></svg> Falar no WhatsApp</a>
+</nav>
+
+<main>
+<section class="p-hero">
+  <canvas id="field" data-mode="drift" aria-hidden="true"></canvas>
+  <div class="wrap grid">
+    <div>
+      <h1>Vollta</h1>
+      <p class="what">Pós-venda automático para lojas. Avisa o cliente no WhatsApp a cada etapa do pedido e pede a avaliação quando o produto chega.</p>
+      <div class="ctas">
+        <a class="btn btn-ink wa-link" data-msg="Olá! Quero conhecer o Vollta para a minha loja." href="#"><svg><use href="#i-wa"/></svg> Quero o Vollta</a>
+        <a class="btn btn-line" href="https://vollta.app" target="_blank" rel="noopener">Abrir vollta.app <svg><use href="#i-arrow"/></svg></a>
+      </div>
+      <p class="meta"><span>Integra com <b>Vnda</b> e <b>Olist</b></span><span>Conector <b>Shopify</b> em construção</span><span>Online e balcão</span></p>
+    </div>
+    <div class="mock" aria-hidden="true">
+      <div class="mock-bar"><b>Pedido #4821 · Ana</b><span class="chip"><i></i>automático</span></div>
+      <ol class="steps-m">
+        <li><span class="dot"><svg><use href="#i-check"/></svg></span><div><strong>Pagamento aprovado</strong><span>Mensagem enviada no WhatsApp</span></div><time>09:12</time></li>
+        <li><span class="dot"><svg><use href="#i-check"/></svg></span><div><strong>Em separação</strong><span>Cliente avisado</span></div><time>10:40</time></li>
+        <li><span class="dot"><svg><use href="#i-check"/></svg></span><div><strong>Enviado</strong><span>Código de rastreio no WhatsApp</span><div class="bubble">Oi, Ana! Seu pedido saiu para entrega. Acompanhe pelo link de rastreio.</div></div><time>16:05</time></li>
+        <li><span class="dot"><svg><use href="#i-check"/></svg></span><div><strong>Avaliação recebida</strong><span class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span></div><time>+3 dias</time></li>
+      </ol>
+      <p class="fine">Tela ilustrativa.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="jam">
+      <h2>O que o Vollta destrava</h2>
+      <p>Cliente perguntando "cadê meu pedido?", alguém da equipe avisando um a um no WhatsApp e a avaliação que nunca chega. O Vollta faz esse trabalho sozinho, pedido por pedido.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="feats">
+      <div><svg><use href="#i-msg"/></svg><h3>Aviso a cada etapa</h3><p>Pagamento aprovado, em separação, enviado, entregue. O cliente recebe a mensagem no WhatsApp na hora em que o pedido muda de status.</p></div>
+      <div><svg><use href="#i-camera"/></svg><h3>Avaliação por pedido</h3><p>Depois da entrega, o Vollta pede a avaliação, com foto. Funciona para a venda online e para a venda no balcão.</p></div>
+      <div><svg><use href="#i-link"/></svg><h3>Ligado à sua loja</h3><p>Conecta com Vnda e Olist. O conector para Shopify está em construção. Os pedidos entram sozinhos, sem planilha.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="showcase">
+      <div>
+        <h2>Nasceu dentro de uma ótica.</h2>
+        <p>O Vollta foi feito para a operação da Artyeto, que vende online e em loja. Só depois virou produto para outras empresas. Por isso ele resolve o que acontece no dia a dia de uma loja.</p>
+        <ul>
+          <li><svg><use href="#i-check"/></svg>Mensagens no tom da sua marca, com o nome do cliente.</li>
+          <li><svg><use href="#i-check"/></svg>Avaliações reunidas num só lugar, com foto do produto em uso.</li>
+          <li><svg><use href="#i-check"/></svg>A equipe acompanha tudo num painel simples.</li>
+        </ul>
+      </div>
+      <div class="mock" aria-hidden="true">
+        <div class="mock-bar"><b>Avaliações</b><span class="chip"><i></i>últimos 7 dias</span></div>
+        <div class="panel-m">
+          <div class="kpi"><b>48</b><span>avaliações recebidas</span></div>
+          <div class="kpi"><b>4,8</b><span>nota média</span></div>
+        </div>
+        <ul class="flow">
+          <li><i></i>Ana · armação Aurora<span>★ 5 · com foto</span></li>
+          <li><i></i>Carlos · lentes 1.67<span>★ 5</span></li>
+          <li><i></i>Juliana · óculos de sol<span>★ 4 · com foto</span></li>
+        </ul>
+        <p class="fine">Dados ilustrativos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><h2>Perguntas frequentes</h2></div>
+    <div class="faq">
+      <details><summary>Preciso trocar a plataforma da minha loja?<svg><use href="#i-plus"/></svg></summary><p>Não. O Vollta se conecta à loja que você já tem. Hoje integra com Vnda e Olist, e o conector para Shopify está em construção.</p></details>
+      <details><summary>As mensagens saem do meu WhatsApp?<svg><use href="#i-plus"/></svg></summary><p>Saem do número da sua loja, com o nome do cliente e o tom da sua marca. Você aprova os textos antes de ligar.</p></details>
+      <details><summary>Como começo?<svg><use href="#i-plus"/></svg></summary><p>Chame no WhatsApp. A gente entende a sua operação, conecta a loja e liga os avisos em etapas, acompanhando os primeiros pedidos com você.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Quer o pós-venda <em>no automático</em>?</h2>
+    <div class="ctas">
+      <a class="btn btn-ink wa-link" data-msg="Olá! Quero conhecer o Vollta para a minha loja." href="#"><svg><use href="#i-wa"/></svg> Falar no WhatsApp</a>
+      <a class="btn btn-line" href="https://vollta.app" target="_blank" rel="noopener">vollta.app <svg><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <a class="logo" href="/"><svg><use href="#i-sprout"/></svg>brotta</a>
+        <p class="tag">Software para resolver o gargalo da sua empresa e ajudar ela a evoluir.</p>
+      </div>
+      <div><h4>Produtos</h4><ul><li><a href="/vollta">Vollta</a></li><li><a href="/lentiva">Lentiva</a></li><li><a href="/shopify">Lojas Shopify</a></li><li><a href="/sob-medida">Sob medida</a></li></ul></div>
+      <div><h4>Acesse</h4><ul><li><a href="https://vollta.app" target="_blank" rel="noopener">vollta.app</a></li><li><a href="https://lentiva.app" target="_blank" rel="noopener">lentiva.app</a></li></ul></div>
+      <div><h4>Contato</h4><ul><li><a class="wa-link" data-msg="Olá, Brotta!" href="#">WhatsApp (11) 91272-8420</a></li><li><a href="/#como">Como trabalhamos</a></li></ul></div>
+    </div>
+    <div class="legal"><span>© <span id="yr">2026</span> Brotta Ecossistemas Digitais LTDA</span><span>CNPJ 69.959.244/0001-00 · São Paulo, SP</span></div>
+  </div>
+</footer>
+
+<a class="wa-float wa-link" id="waFloat" data-msg="Olá! Quero conhecer o Vollta." href="#" aria-label="Falar no WhatsApp"><svg><use href="#i-wa"/></svg></a>
+<script src="/assets/site.js" defer></script>
+<script src="/assets/field.js" defer></script>
+</body>
+</html>
