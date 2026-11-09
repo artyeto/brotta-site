@@ -1,4 +1,4 @@
-# Brotta Ecossistemas Digitais LTDA
+# Brotta Ecossistema Digital LTDA
 
 ## O que é
 Estúdio brasileiro de produto digital. Encontra o gargalo que trava uma empresa e constrói o software que destrava. Dona de produtos próprios e também faz software sob medida.
