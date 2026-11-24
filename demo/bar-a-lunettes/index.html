@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Virtual try-on preview for Bar à lunettes | Brotta</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#F3F0E8">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+  .demo-nav { position: sticky; top: 0; z-index: 10; background: rgba(243,240,232,.9); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); box-shadow: 0 1px 0 var(--rule); }
+  .demo-nav .wrap { height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .lang { display: flex; gap: 6px; }
+  .lang button { height: 36px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--rule); background: transparent; font: 500 14px/1 var(--font); color: var(--ink-2); cursor: pointer; }
+  .lang button[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  .demo-hero { padding: clamp(40px, 7vw, 88px) 0 clamp(24px, 4vw, 40px); }
+  .demo-hero h1 { font: 800 clamp(36px, 5.4vw, 72px)/0.98 var(--font); letter-spacing: -0.045em; margin: 0 0 18px; max-width: 16ch; }
+  .demo-hero p { font: 400 clamp(18px, 1.6vw, 21px)/1.45 var(--font); color: var(--ink-2); margin: 0; max-width: 46ch; }
+  .frames { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; padding-bottom: clamp(40px, 6vw, 72px); }
+  .frame { background: var(--sheet); border: 1px solid var(--rule); border-radius: 18px; padding: 18px; display: flex; flex-direction: column; gap: 14px; }
+  .frame figure { margin: 0; aspect-ratio: 4 / 3; border-radius: 12px; background: #fff; display: grid; place-items: center; overflow: hidden; }
+  .frame img { width: 100%; height: 100%; object-fit: cover; }
+  .frame h2 { font: 700 21px/1.2 var(--font); margin: 0; letter-spacing: -0.01em; }
+  .frame .sub { font-size: 15px; color: var(--ink-3); margin: -8px 0 0; }
+  .frame .btn { justify-content: center; width: 100%; }
+  .notes { border-top: 1px solid var(--rule); padding-top: 28px; padding-bottom: 56px; display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); font-size: 15px; color: var(--ink-2); }
+  .notes p { margin: 0; }
+  .notes strong { color: var(--ink); }
+  .demo-foot { background: var(--ink); color: var(--paper); padding: 28px 0; font-size: 15px; }
+  .demo-foot .wrap { display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; align-items: center; }
+  .demo-foot a { color: var(--paper); text-decoration: underline; text-underline-offset: 3px; }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-sprout" viewBox="0 0 32 32"><path d="M16 29V15" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" fill="none"/><path d="M16 16c0-6.5 4.6-11 11-11 0 6.4-4.5 11-11 11z" fill="currentColor"/><path d="M16 19c0-4.6-3.3-7.8-7.8-7.8 0 4.5 3.2 7.8 7.8 7.8z" fill="currentColor" opacity=".55"/></symbol>
+</svg>
+
+<header class="demo-nav">
+  <div class="wrap">
+    <a class="logo" href="/" aria-label="Brotta"><svg><use href="#i-sprout"/></svg>brotta</a>
+    <div class="lang" role="group" aria-label="Language / Langue">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="demo-hero">
+    <div class="wrap">
+      <h1 data-t="titulo">Virtual try-on preview for Bar à lunettes</h1>
+      <p data-t="lede">Three frames from the Marie-Sophie Dion collection, built from the front photos already on your site. Try them with your phone camera or with a photo.</p>
+    </div>
+  </section>
+
+  <section class="wrap frames" id="frames"></section>
+
+  <section class="wrap notes">
+    <p data-t="nota1"><strong>Private by design.</strong> The camera image is processed only on the device. Nothing is sent or saved.</p>
+    <p data-t="nota2"><strong>Approximate size.</strong> Frame sizes use standard measurements until we receive yours (lens width, bridge, temple length and total width).</p>
+    <p data-t="nota3"><strong>Best on a phone.</strong> Open this page on your phone and allow the camera. On a computer you can upload a photo.</p>
+  </section>
+</main>
+
+<footer class="demo-foot">
+  <div class="wrap">
+    <span data-t="rodape">Prepared for Bar à lunettes by Brotta.</span>
+    <span><a href="mailto:brotta.saas@gmail.com">brotta.saas@gmail.com</a> · <a href="https://brotta.online">brotta.online</a></span>
+  </div>
+</footer>
+
+<script type="module">
+  // Medidas provisórias até a loja informar as reais (lente, ponte, haste, largura total, em mm).
+  const MEDIDAS = { larguraTotal: 140, lente: 50, ponte: 20, haste: 145, plaquetas: false }; // plaquetas: a ponte de acetato apoia direto no nariz
+  // Acetato translúcido (Blu e Cur): quanto da pele aparece pela frente, de 0 (opaco) a 0,9.
+  const TRANSLUCIDO = Number(new URLSearchParams(location.search).get('t') ?? 0.2);
+  // medidas de cada armação somam-se às MEDIDAS; alturaHaste (mm): a haste genérica fica fina como a real
+  const ARMACOES = [
+    { id: 1, nome: 'Brunelle', cor: 'Blu', foto: 'img/brunelle-blu.jpg', frente: 'img/brunelle-blu-provador.png', medidas: { alturaHaste: 7 } },
+    { id: 2, nome: 'Genest', cor: 'Blu', foto: 'img/genest-blu.jpg', frente: 'img/genest-blu-provador.png', medidas: { alturaHaste: 7 } },
+    { id: 3, nome: 'Asselin', cor: 'Cur', foto: 'img/asselin-cur.jpg', frente: 'img/asselin-cur-provador.png', medidas: { alturaHaste: 7 } },
+  ];
+  const T = {
+    en: {
+      titulo: 'Virtual try-on preview for Bar à lunettes',
+      lede: 'Three frames from the Marie-Sophie Dion collection, built from the front photos already on your site. Try them with your phone camera or with a photo.',
+      nota1: '<strong>Private by design.</strong> The camera image is processed only on the device. Nothing is sent or saved.',
+      nota2: '<strong>Approximate size.</strong> Frame sizes use standard measurements until we receive yours (lens width, bridge, temple length and total width).',
+      nota3: '<strong>Best on a phone.</strong> Open this page on your phone and allow the camera. On a computer you can upload a photo.',
+      rodape: 'Prepared for Bar à lunettes by Brotta.', provar: 'Try it on', colecao: 'Marie-Sophie Dion',
+    },
+    fr: {
+      titulo: "Aperçu de l'essayage virtuel pour Bar à lunettes",
+      lede: 'Trois montures de la collection Marie-Sophie Dion, préparées à partir des photos de face déjà présentes sur votre site. Essayez-les avec la caméra de votre téléphone ou avec une photo.',
+      nota1: "<strong>Confidentiel.</strong> L'image de la caméra est traitée uniquement sur l'appareil. Rien n'est envoyé ni enregistré.",
+      nota2: '<strong>Taille approximative.</strong> Les montures utilisent des mesures standards en attendant les vôtres (largeur du verre, pont, longueur des branches et largeur totale).',
+      nota3: "<strong>Idéal sur téléphone.</strong> Ouvrez cette page sur votre téléphone et autorisez la caméra. Sur ordinateur, vous pouvez utiliser une photo.",
+      rodape: 'Préparé pour Bar à lunettes par Brotta.', provar: 'Essayer', colecao: 'Marie-Sophie Dion',
+    },
+  };
+  let idioma = (new URLSearchParams(location.search).get('lang') || (navigator.language || '').slice(0, 2)) === 'fr' ? 'fr' : 'en';
+  let provadorIdioma = null; // o provador fixa o idioma na primeira abertura; trocar depois exige recarregar
+
+  function desenhar() {
+    document.documentElement.lang = idioma;
+    document.title = T[idioma].titulo + ' | Brotta';
+    for (const el of document.querySelectorAll('[data-t]')) el.innerHTML = T[idioma][el.dataset.t];
+    for (const b of document.querySelectorAll('[data-lang]')) b.setAttribute('aria-pressed', b.dataset.lang === idioma);
+    document.getElementById('frames').replaceChildren(...ARMACOES.map((a) => {
+      const art = document.createElement('article');
+      art.className = 'frame';
+      art.innerHTML = `<figure><img src="${a.foto}" alt="${a.nome} ${a.cor}" loading="lazy"></figure>
+        <h2>${a.nome} · ${a.cor}</h2><p class="sub">${T[idioma].colecao}</p>
+        <button type="button" class="btn btn-ink" data-provar="${a.id}">${T[idioma].provar}</button>`;
+      return art;
+    }));
+  }
+
+  document.addEventListener('click', async (e) => {
+    const lang = e.target.closest('[data-lang]');
+    if (lang) {
+      idioma = lang.dataset.lang;
+      if (provadorIdioma && provadorIdioma !== idioma) { const u = new URL(location.href); u.searchParams.set('lang', idioma); location.href = u; return; }
+      desenhar();
+      return;
+    }
+    const botao = e.target.closest('[data-provar]');
+    if (!botao) return;
+    botao.disabled = true;
+    try {
+      const m = await import('/demo/provador.js');
+      provadorIdioma = provadorIdioma || idioma;
+      m.abrirProvador({
+        titulo: 'Marie-Sophie Dion', sol: false, idioma: provadorIdioma, medidas: MEDIDAS, translucido: TRANSLUCIDO,
+        cores: ARMACOES.map((a) => ({ id: a.id, nome: `${a.nome} ${a.cor}`, frente: a.frente, medidas: a.medidas })),
+        inicial: Number(botao.dataset.provar),
+      });
+    } catch (erro) {
+      console.error('Virtual try-on:', erro);
+    } finally {
+      botao.disabled = false;
+    }
+  });
+
+  desenhar();
+</script>
+</body>
+</html>
